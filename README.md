@@ -13,13 +13,13 @@ The goal of the project is to design and implement a relational database based o
    ```bash
    git clone <repository-link>
 
-   ##Important
+##Important
    - Always run git pull before starting work.
    - Do not overwrite someone else's changes.
    - Use clear commit messages.
    - Let the team know what file you are working on to avoid conflicts.
 
-   ## Tasks
+## Tasks
    - Convert ERD into relational schema
    - implement SQL tables and constrain
    - add mock data
