@@ -3,11 +3,6 @@ The repository contains our group project for the KEN2110 Database course.
 
 The goal is to design and implement a relational database that models the housing crisis in Amsterdam - tracking properties, their locations, housing types, landlords and rental listing status.
 
-## Possible Repository Structure
-- `sql/` → SQL files for schema creation, mock data, and queries
-- `src/` → code used to interact with the database
-- `docs/` → ERD, relational schema, and other documentation
-
 ## How to work on the Repository
 1. Clone the repository:
    ```bash
