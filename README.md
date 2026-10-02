@@ -99,3 +99,5 @@ mysql> SELECT ht.TypeName AS HousingType, loc.City, li.Price, avg_price.AvgPrice
 Empty set (0.01 sec)
 '''
 The queries returned ampty results because the selected datasets contains no rental listings or named landlords. No listing records were fabricated. therefore, these results reflect missing dadtaset coverage, not an absent of rental housing.
+## Video Presentation:
+[![Our presentation: ](https://i9.ytimg.com/vi/JVG7gYdjscE/mqdefault.jpg?sqp=COiVgNYG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGEgYShhMA8=&rs=AOn4CLCpOZsik65oLXuGPmIVFaNoXx_blQ)](https://youtu.be/JVG7gYdjscE)

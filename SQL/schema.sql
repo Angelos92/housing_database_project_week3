@@ -10,8 +10,8 @@ DROP TABLE IF EXISTS LandlordType;
 
 CREATE TABLE Location (
     LocationId   INT PRIMARY KEY AUTO_INCREMENT,
-    Neighborhood VARCHAR(100) NOT NULL,
-    Street       VARCHAR(100) NOT NULL,
+    Neighborhood VARCHAR(100),
+    Street       VARCHAR(100),
     PostalCode   VARCHAR(10) NOT NULL,
     City         VARCHAR(100) NOT NULL
 );
@@ -28,7 +28,7 @@ CREATE TABLE RentalStatus (
 
 CREATE TABLE LandlordType (
     LandlordTypeId INT PRIMARY KEY AUTO_INCREMENT,
-    TypeName       VARCHAR(50) NOT NULL
+    TypeName       VARCHAR(50)
 );
 
 -- Tables with foreign keys
@@ -59,7 +59,7 @@ CREATE TABLE Listing (
     ListingId      INT PRIMARY KEY AUTO_INCREMENT,
     RentalStatusId INT NOT NULL,
     PropertyId     INT NOT NULL,
-    LandlordId     INT NOT NULL,
+    LandlordId     INT,
     Price          DECIMAL(10,2) NOT NULL CHECK (Price >= 0),
     Website        VARCHAR(2048),
     FOREIGN KEY (RentalStatusId) REFERENCES RentalStatus(RentalStatusId)
