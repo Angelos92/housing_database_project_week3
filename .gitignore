@@ -1,2 +1,7 @@
 # Ignore large original BAG datasets
 Datasets/A/BAG_*.csv
+__pycache__/
+output/real_data/python_packages/
+output/real_data/launcher_packages/
+output/real_data/host_packages/
+output/real_data/mysql_test/

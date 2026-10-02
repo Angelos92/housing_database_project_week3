@@ -1,0 +1,18 @@
+{
+  "duplicate_property_id": {
+    "passed": true,
+    "mysql_error": 1062
+  },
+  "orphan_location": {
+    "passed": true,
+    "mysql_error": 1452
+  },
+  "negative_measurement": {
+    "passed": true,
+    "mysql_error": 3819
+  },
+  "invalid_percentage": {
+    "passed": true,
+    "mysql_error": 3819
+  }
+}
