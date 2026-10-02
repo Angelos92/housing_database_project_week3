@@ -3,10 +3,16 @@ The repository contains our group project for the KEN2110 Database course.
 
 The goal is to design and implement a relational database that models the housing crisis in Amsterdam - tracking properties, their locations, housing types, landlords and rental listing status.
 
+Repository: https://github.com/Angelos92/housing_database_project_week3
+
+## Real-world data integration design
+
+
 ## How to work on the Repository
 1. Clone the repository:
    ```bash
    git clone <repository-link>
+   ```
 
 ## Important
 - Always run "git pull" before starting work.
