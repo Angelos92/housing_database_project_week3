@@ -61,5 +61,5 @@ Three advance SQL queries were written to demonstrate multi-table joins, aggrega
 ### 3. Listing priced below average for their housing type
 **Purpose:** Surface listing that are cheaper than the average for their own housing type - a simple way to highlight potential "good deals" for users browsing the platform. The average is computed once per housing type in a derived table and joined back, so it's shown directly alongside each price rather than hidden inside the filter condition.
 **Technique:** derived table (subquery in 'FROM'), 'JOIN', 'GROUP BY', computed column.
-
+## Video Presentation:
 [![Our presentation: ](https://i9.ytimg.com/vi/JVG7gYdjscE/mqdefault.jpg?sqp=COiVgNYG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGEgYShhMA8=&rs=AOn4CLCpOZsik65oLXuGPmIVFaNoXx_blQ)](https://youtu.be/JVG7gYdjscE)
