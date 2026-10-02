@@ -9,7 +9,7 @@ HAVING COUNT(*) > 1
 ORDER BY AveragePrice DESC;
 
 
---2. Housing types that currently have no listing at all (anti-join pattern using NOT EXISTS)
+-- 2. Housing types that currently have no listing at all (anti-join pattern using NOT EXISTS)
 SELECT ht.TypeName 
 FROM HousingType ht
 WHERE NOT EXISTS (

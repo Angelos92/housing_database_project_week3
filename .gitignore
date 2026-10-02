@@ -1,0 +1,2 @@
+# Ignore large original BAG datasets
+Datasets/A/BAG_*.csv
