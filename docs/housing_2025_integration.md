@@ -84,3 +84,7 @@ CBS reconciliation: 18,495 = 184 selected + 18,311 explicitly outside scope. Hou
 Six automated tests passed: missing versus zero, numerical validation, dates/postcodes, MySQL DATE/DECIMAL comparisons, complete real-file reconciliation, new fields, housing types, old construction years, and no fabricated listings or geographic matches. Run `python -m unittest discover -s tests -v`. Test evidence: `output/housing_2025/validation_import_report.json`.
 
 The three original Week 3 queries were rerun on the new test database. Queries 1 and 3 return no rental listings. Query 2 now returns **appartement and woonhuis** because source housing types exist but rental listings do not. Earlier README outputs describe the old dataset and should be labelled historical when the team updates its report. This is a coverage limitation, not proof of no rentals.
+
+Query 4: Which neighbourhoods have the highest rental shares?
+
+The query returned the ten neighbourhoods with the highest rental housing shares in the selected CBS data. Utrecht Science Park ranked first, with 99% of its 1,707 dwellings classified as rental housing. Bedrijvengebied Kanaleneiland followed with 97%, and Neckardreef en omgeving with 89%. Across the ten neighbourhoods, rental shares ranged from 83% to 99%
