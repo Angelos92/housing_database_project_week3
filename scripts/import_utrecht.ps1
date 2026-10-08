@@ -1,5 +1,5 @@
 param(
-    [string]$Database = 'housing_utrecht',
+    [string]$Database = 'housing_2025',
     [string]$User = 'root',
     [string]$Server = 'localhost',
     [int]$Port = 3306
