@@ -1,4 +1,4 @@
--- Select your imported database first: USE housing_utrecht;
+-- Select your imported database first: USE housing_2025;
 SELECT d.DatasetId, d.TotalRows, d.SelectedRows, d.ExcludedRows,
        COUNT(r.SourceRow) AS StoredSourceRecords,
        SUM(r.RecordStatus='accepted') AS Accepted,
@@ -20,7 +20,7 @@ UNION ALL SELECT 'Landlord',COUNT(*) FROM Landlord;
 SELECT COUNT(*) AS AcceptedRecordsWithoutEntity
 FROM SourceRecord r
 WHERE r.RecordStatus='accepted' AND (
- (r.DatasetId='utrecht' AND NOT EXISTS (
+ (r.DatasetId='housing2025' AND NOT EXISTS (
    SELECT 1 FROM Property p WHERE p.DatasetId=r.DatasetId AND p.SourceRow=r.SourceRow))
  OR (r.DatasetId='cbs2025' AND NOT EXISTS (
    SELECT 1 FROM RegionStatistics s WHERE s.DatasetId=r.DatasetId AND s.SourceRow=r.SourceRow))

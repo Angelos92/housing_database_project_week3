@@ -1,4 +1,4 @@
-"""Profile and clean the selected Utrecht CSV and CBS XLSX without editing either.
+"""Profile and clean the 2025 housing CSV and CBS XLSX without editing either.
 
 Writes typed, importable JSON plus full raw selected records, changes, rejects and
 counts. This is a database ETL artifact, not a replacement Excel workbook.
@@ -8,6 +8,7 @@ import csv
 import hashlib
 import json
 import re
+from datetime import date
 from collections import Counter
 from decimal import Decimal, InvalidOperation
 from pathlib import Path
@@ -15,18 +16,19 @@ from pathlib import Path
 import openpyxl
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / 'output/real_data'
+OUT = ROOT / 'output/housing_2025'
+SCHEMA_VERSION = 'housing2025-v1'
+HOUSING_DATASET = 'housing2025'
+CBS_MUNICIPALITIES = {'Utrecht': '0344', 'Nieuwegein': '0356'}
 MEASURES = {
-    'lot-len': 'Lot length as supplied', 'lot-width': 'Lot width as supplied',
     'lot-area': 'Lot area as supplied', 'house-area': 'House area as supplied',
-    'garden-size': 'Garden size as supplied', 'taxvalue': 'Tax value as supplied',
+    'garden-size': 'Garden size as supplied',
     'retailvalue': 'Retail value as supplied; not a rent or verified transaction price',
+    'askingprice': 'Asking price as supplied; not a monthly rent',
+    'dist-from-train': 'Distance from train as supplied; unit unconfirmed',
 }
 ATTRIBUTES = {
-    'balcony': 'Uninterpreted balcony code; observed 0, 1, 2',
-    'energy-eff': 'Uninterpreted energy efficiency code; not an energy label',
-    'monument': 'Uninterpreted monument code',
-    'select': 'Uninterpreted selection code; never used as a row filter',
+    'energyeff': 'Source energy efficiency indicator, 0 or 1; not a substitute for energylabel',
 }
 CBS = {
     'a_inw': ('Population', True, None), 'a_hh': ('Households', True, None),
@@ -43,7 +45,29 @@ def text(v):
 
 
 def missing(v):
-    return 'blank' if text(v) == '' else ('dot' if text(v) == '.' else None)
+    if text(v) == '': return 'blank'
+    if text(v) == '.': return 'dot'
+    if text(v).casefold() == 'unspecified': return 'unspecified'
+    return None
+
+
+def iso_date(v):
+    if missing(v): return None
+    if not re.fullmatch(r'\d{4}-\d{2}-\d{2}', text(v)):
+        raise ValueError(f'Expected YYYY-MM-DD date: {v!r}')
+    return date.fromisoformat(text(v)).isoformat()
+
+
+def postal_code(full, prefix):
+    full = None if missing(full) else re.sub(r'\s+', '', text(full)).upper()
+    prefix = None if missing(prefix) else text(prefix)
+    if full and not re.fullmatch(r'[1-9]\d{3}[A-Z]{2}', full):
+        raise ValueError('Invalid full postal code')
+    if prefix and not re.fullmatch(r'[1-9]\d{3}', prefix):
+        raise ValueError('Invalid postcode prefix')
+    if full and prefix and full[:4] != prefix:
+        raise ValueError('Full postcode and prefix disagree')
+    return full
 
 
 def number(v, integral=False, maximum=None, precision=4):
@@ -89,6 +113,7 @@ def profile(rows):
         result[column] = {
             'blank': sum(missing(v) == 'blank' for v in values),
             'dot': sum(missing(v) == 'dot' for v in values),
+            'unspecified': sum(missing(v) == 'unspecified' for v in values),
             'python_types': dict(Counter(type(v).__name__ for v in values)),
             'whitespace_values': sum(isinstance(v, str) and v != v.strip() for v in values),
             'unique_values': len(counts),
@@ -133,39 +158,58 @@ def prepare(csv_path, xlsx_path):
 
     with csv_path.open(encoding='utf-8-sig', newline='') as f:
         reader = csv.DictReader(f)
-        expected = {'id','zipcode','x-coor','y-coor','buildyear','bathrooms'} | set(MEASURES) | set(ATTRIBUTES)
+        expected = {'id','zipcode4','zipcode6','zipcode6id','housetype','x-coor','y-coor',
+                    'buildyear','bathrooms','rooms','energylabel','valuationdate','street',
+                    'subdistrict','district','city'} | set(MEASURES) | set(ATTRIBUTES)
         if set(reader.fieldnames or []) != expected:
             raise ValueError('Unexpected Utrecht CSV columns; update mapping before importing.')
         houses = list(reader)
     id_counts = Counter(text(r['id']) for r in houses)
+    type_names = sorted({text(r['housetype']).casefold() for r in houses if not missing(r['housetype'])})
+    type_ids = {name: i+1 for i,name in enumerate(type_names)}
+    tables['HousingType'] = [dict(HousingTypeId=i,TypeName=name) for name,i in type_ids.items()]
+    def source_text(rownum, key, value):
+        cleaned = None if missing(value) else text(value)
+        if cleaned != value:
+            changes.append(dict(dataset=HOUSING_DATASET,row=rownum,field=key,raw=value,
+                cleaned=cleaned,reason=f'{missing(value)} marker converted to NULL' if missing(value) else 'Trim surrounding whitespace'))
+        return cleaned
     for offset, r in enumerate(houses, 2):
         key = text(r['id'])
-        raw = raw_record('utrecht', offset, key, r)
+        raw = raw_record(HOUSING_DATASET, offset, key, r)
         try:
             if not re.fullmatch(r'\d{1,50}', key):
                 raise ValueError('Missing/invalid source identifier')
             if id_counts[key] != 1:
                 raise ValueError('Duplicate identifier; all conflicting occurrences quarantined')
-            postcode = text(r['zipcode']) or None
-            if postcode and not re.fullmatch(r'\d{4}', postcode):
-                raise ValueError('Expected four-character source postcode, not a full address')
-            vals = {k: numeric('utrecht', offset, k, r[k]) for k in MEASURES}
-            codes = {k: numeric('utrecht', offset, k, r[k], integral=True, maximum=2147483647) for k in ATTRIBUTES}
-            build = numeric('utrecht', offset, 'buildyear', r['buildyear'], integral=True, maximum=9999)
+            postcode = postal_code(r['zipcode6'],r['zipcode4'])
+            if postcode != r['zipcode6']:
+                changes.append(dict(dataset=HOUSING_DATASET,row=offset,field='zipcode6',raw=r['zipcode6'],
+                                    cleaned=postcode,reason='Normalize postcode whitespace/case or missing marker'))
+            vals = {k: numeric(HOUSING_DATASET, offset, k, r[k]) for k in MEASURES}
+            codes = {k: numeric(HOUSING_DATASET, offset, k, r[k], integral=True, maximum=1) for k in ATTRIBUTES}
+            build = numeric(HOUSING_DATASET, offset, 'buildyear', r['buildyear'], integral=True, maximum=9999)
             if build is not None and build < 1000:
                 raise ValueError('Invalid four-digit build year; do not treat as full date')
-            baths = numeric('utrecht', offset, 'bathrooms', r['bathrooms'], integral=True, maximum=32767)
-            x = numeric('utrecht', offset, 'x-coor', r['x-coor'])
-            y = numeric('utrecht', offset, 'y-coor', r['y-coor'])
+            baths = numeric(HOUSING_DATASET, offset, 'bathrooms', r['bathrooms'], integral=True, maximum=32767)
+            rooms = numeric(HOUSING_DATASET, offset, 'rooms', r['rooms'], integral=True, maximum=32767)
+            x = numeric(HOUSING_DATASET, offset, 'x-coor', r['x-coor'])
+            y = numeric(HOUSING_DATASET, offset, 'y-coor', r['y-coor'])
+            valuation_date = iso_date(r['valuationdate'])
+            energy_label = source_text(offset,'energylabel',r['energylabel'])
+            if energy_label and energy_label not in {'A++++','A+++','A++','A+','A','B','C','D','E','F','G'}:
+                raise ValueError('Unexpected energy label; review rather than guess')
         except (ValueError, TypeError) as e:
             reject(raw, e)
             continue
         pid = offset - 1
-        tables['Location'].append(dict(LocationId=pid, Street=None, PostalCodePrefix=postcode,
-            City=None, XCoordinate=x, YCoordinate=y, CoordinateSystem=None,
+        tables['Location'].append(dict(LocationId=pid, Street=source_text(offset,'street',r['street']), PostalCode=postcode,
+            City=source_text(offset,'city',r['city']), XCoordinate=x, YCoordinate=y, CoordinateSystem=None,
             NeighborhoodBoundaryYear=None, NeighborhoodCode=None))
-        tables['Property'].append(dict(PropertyId=pid, DatasetId='utrecht', SourceRow=offset,
-            ExternalId=key, LocationId=pid, HousingTypeId=None, BuildYear=build, Bathrooms=baths))
+        tables['Property'].append(dict(PropertyId=pid, DatasetId=HOUSING_DATASET, SourceRow=offset,
+            ExternalId=key, LocationId=pid, HousingTypeId=type_ids.get(text(r['housetype']).casefold()),
+            BuildYear=build, Bathrooms=baths, Rooms=rooms, EnergyLabel=energy_label,
+            ValuationDate=valuation_date, SourceAddressId=source_text(offset,'zipcode6id',r['zipcode6id'])))
         for k, v in vals.items():
             if v is not None:
                 tables['PropertyMeasurement'].append(dict(PropertyId=pid, MeasureCode=k, NumericValue=v))
@@ -191,7 +235,7 @@ def prepare(csv_path, xlsx_path):
         for k,v in r.items():
             if missing(v): all_missing[k] += 1
             full_types.setdefault(k, Counter())[type(v).__name__] += 1
-        if text(r['gm_naam']) == 'Utrecht':
+        if text(r['gm_naam']) in CBS_MUNICIPALITIES:
             selected.append((rownum,r))
     workbook.close()
     for rownum, r in selected:
@@ -201,7 +245,9 @@ def prepare(csv_path, xlsx_path):
             if cbs_ids[code] != 1:
                 raise ValueError('Duplicate CBS code in source workbook')
             level = text(r['recs'])
-            patterns = {'Gemeente': r'GM0344', 'Wijk': r'WK0344[A-Z0-9]{2}', 'Buurt': r'BU0344[A-Z0-9]{4}'}
+            municipality = CBS_MUNICIPALITIES[text(r['gm_naam'])]
+            patterns = {'Gemeente': 'GM'+municipality, 'Wijk': 'WK'+municipality+r'[A-Z0-9]{2}',
+                        'Buurt': 'BU'+municipality+r'[A-Z0-9]{4}'}
             if level not in patterns or not re.fullmatch(patterns[level], code):
                 raise ValueError('Unexpected Utrecht CBS code/level')
             vals = {column: numeric('cbs2025',rownum,k,r[k],integral=integral,
@@ -211,7 +257,7 @@ def prepare(csv_path, xlsx_path):
             pc = str(pc).zfill(4) if pc is not None else None
         except (ValueError,TypeError) as e:
             reject(raw,e); continue
-        parent = None if level == 'Gemeente' else ('GM0344' if level=='Wijk' else 'WK'+code[2:8])
+        parent = None if level == 'Gemeente' else ('GM'+code[2:6] if level=='Wijk' else 'WK'+code[2:8])
         tables['Region'].append(dict(BoundaryYear=2025, RegionCode=code, RegionName=text(r['regio']),
                                     RegionLevel=level, ParentCode=parent))
         tables['RegionStatistics'].append(dict(BoundaryYear=2025,RegionCode=code,StatisticsYear=2025,
@@ -220,30 +266,25 @@ def prepare(csv_path, xlsx_path):
     region_keys = {r['RegionCode'] for r in tables['Region']}
     if any(r['ParentCode'] and r['ParentCode'] not in region_keys for r in tables['Region']):
         raise ValueError('Missing accepted CBS parent region; fix rejected parent before import')
-    for dataset,path,count,chosen in [('utrecht',csv_path,len(houses),len(houses)),('cbs2025',xlsx_path,total,len(selected))]:
+    for dataset,path,count,chosen in [(HOUSING_DATASET,csv_path,len(houses),len(houses)),('cbs2025',xlsx_path,total,len(selected))]:
         tables['SourceDataset'].append(dict(DatasetId=dataset,FileName=path.name,Sha256=hash_file(path),
             TotalRows=count,SelectedRows=chosen,ExcludedRows=count-chosen))
     counts = {}
-    for dataset in ('utrecht','cbs2025'):
+    for dataset in (HOUSING_DATASET,'cbs2025'):
         records=[r for r in tables['SourceRecord'] if r['DatasetId']==dataset]
         counts[dataset] = dict(selected=len(records),accepted=sum(r['RecordStatus']=='accepted' for r in records),
                                rejected=sum(r['RecordStatus']=='rejected' for r in records))
         assert counts[dataset]['selected']==counts[dataset]['accepted']+counts[dataset]['rejected']
-    by_property = {}
-    for measure in tables['PropertyMeasurement']:
-        by_property.setdefault(measure['PropertyId'], {})[measure['MeasureCode']] = Decimal(measure['NumericValue'])
-    lot_differences = [abs(m['lot-len']*m['lot-width']-m['lot-area']) for m in by_property.values()
-                       if {'lot-len','lot-width','lot-area'} <= m.keys()]
-    return dict(tables=tables, reconciliation=counts, changes=changes, rejected=rejected,
-        profile=dict(utrecht=profile(houses),cbs_utrecht=profile([r for _,r in selected]),
+    return dict(schema_version=SCHEMA_VERSION,tables=tables, reconciliation=counts, changes=changes, rejected=rejected,
+        profile=dict(housing2025=profile(houses),cbs_selected=profile([r for _,r in selected]),
+            cbs_selected_municipalities=list(CBS_MUNICIPALITIES),
             cbs_total_rows=total,cbs_region_levels=dict(levels),
             cbs_duplicate_ids={k:v for k,v in cbs_ids.items() if v>1},
             cbs_missing_all_columns=dict(all_missing),
             cbs_types_all_columns={k:dict(v) for k,v in full_types.items()},
-            ut_source_duplicate_ids={k:v for k,v in id_counts.items() if v>1},
-            ut_exact_duplicate_rows=len(houses)-len({tuple(r.items()) for r in houses}),
-            lot_area_max_difference=str(max(lot_differences)) if lot_differences else None),
-        limitations=['Utrecht units, coordinate reference system and code meanings unconfirmed',
+            housing_duplicate_ids={k:v for k,v in id_counts.items() if v>1},
+            housing_exact_duplicate_rows=len(houses)-len({tuple(r.items()) for r in houses})),
+        limitations=['Housing CSV units, coordinate reference system and provenance/license require source documentation',
             'No property-to-CBS neighbourhood matching inferred from four-digit postcode',
             'CBS selected analytical fields typed; all other selected-row fields retained in RawValues',
             'Teammate supplies publication dates, licenses and source documentation'])
@@ -251,7 +292,7 @@ def prepare(csv_path, xlsx_path):
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--csv',type=Path,default=ROOT/'Datasets/A/utrechthousingsmall.csv')
+    parser.add_argument('--csv',type=Path,default=ROOT/'Datasets/A/2025-housing-dataset-alldata.csv')
     parser.add_argument('--cbs',type=Path,default=ROOT/'Datasets/B/kwb2025.xlsx')
     args=parser.parse_args()
     result=prepare(args.csv,args.cbs)

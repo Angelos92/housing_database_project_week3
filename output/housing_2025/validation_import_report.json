@@ -1,0 +1,130 @@
+{
+  "engine": "MySQL",
+  "server_version": "9.2.0",
+  "host": "127.0.0.1",
+  "port": 33307,
+  "database": "housing_2025_validation",
+  "reconciliation": {
+    "housing2025": {
+      "selected": 153,
+      "accepted": 153,
+      "rejected": 0
+    },
+    "cbs2025": {
+      "selected": 184,
+      "accepted": 184,
+      "rejected": 0
+    }
+  },
+  "tables": {
+    "SourceDataset": {
+      "expected": 2,
+      "actual": 2,
+      "content_sha256": "d26302e35d07cb27932ce5ab5a09c19a4aa01367a935a4360d9c9d6e554debee",
+      "passed": true
+    },
+    "SourceRecord": {
+      "expected": 337,
+      "actual": 337,
+      "content_sha256": "242a6353eb56e1242cb3c77a2582c889cd690f7db7a04347e56b675d5b6fb2f3",
+      "passed": true
+    },
+    "Region": {
+      "expected": 184,
+      "actual": 184,
+      "content_sha256": "49e99bf76506f240d97c137a453ab4f0d6b323ee8ce572d6755c326a233765bf",
+      "passed": true
+    },
+    "RegionStatistics": {
+      "expected": 184,
+      "actual": 184,
+      "content_sha256": "8ff4dab984acea70d58c56374a940d368f6fbe734ee0104ea5b6aea6b2d66d87",
+      "passed": true
+    },
+    "Location": {
+      "expected": 153,
+      "actual": 153,
+      "content_sha256": "e5632291a57d5ecb9c085beb1264b72dfde0c6dea71ceb8d915720e370964187",
+      "passed": true
+    },
+    "HousingType": {
+      "expected": 2,
+      "actual": 2,
+      "content_sha256": "d2b62efe7cc4b06a75eee2d4f11cf86b10f3009f1d62920d5df8192f2cd7049f",
+      "passed": true
+    },
+    "Property": {
+      "expected": 153,
+      "actual": 153,
+      "content_sha256": "12180d2f65e86960be3c1cffb939b7060cbff11e717b582ccb2129059b967036",
+      "passed": true
+    },
+    "MeasurementDefinition": {
+      "expected": 6,
+      "actual": 6,
+      "content_sha256": "a9a6e9db2d71654ce6bbb635215f442020cb552186768b7a9460b9aac87f7864",
+      "passed": true
+    },
+    "PropertyMeasurement": {
+      "expected": 906,
+      "actual": 906,
+      "content_sha256": "e89d6ae262687c62ab3bfc7d12bd5208a6f4f2d5a653594b57a06df0becce1cd",
+      "passed": true
+    },
+    "SourceAttributeDefinition": {
+      "expected": 1,
+      "actual": 1,
+      "content_sha256": "db65a0f5b2b2fcba72f07a7b48563210833ee1bb6414f19af0321b21e31d23cc",
+      "passed": true
+    },
+    "PropertySourceAttribute": {
+      "expected": 150,
+      "actual": 150,
+      "content_sha256": "4a1d8b041ebc75557e3c33283e2c4185da59133243d7fce2a9042206c9fcc2f5",
+      "passed": true
+    },
+    "RentalStatus": {
+      "expected": 0,
+      "actual": 0,
+      "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    },
+    "LandlordType": {
+      "expected": 0,
+      "actual": 0,
+      "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    },
+    "Landlord": {
+      "expected": 0,
+      "actual": 0,
+      "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    },
+    "Listing": {
+      "expected": 0,
+      "actual": 0,
+      "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    }
+  },
+  "verified_before_commit": true,
+  "source_files": [
+    {
+      "DatasetId": "housing2025",
+      "FileName": "2025-housing-dataset-alldata.csv",
+      "Sha256": "a57964f094652d5f0f90c2d14a29e57c2c0740c2ad04fb00386dbf3e4dc526d0",
+      "TotalRows": 153,
+      "SelectedRows": 153,
+      "ExcludedRows": 0
+    },
+    {
+      "DatasetId": "cbs2025",
+      "FileName": "kwb2025.xlsx",
+      "Sha256": "f5e265fb5d13ac51effb4389ee9171506e69cf2cb4abdabd250f60252b3cc190",
+      "TotalRows": 18495,
+      "SelectedRows": 184,
+      "ExcludedRows": 18311
+    }
+  ]
+}

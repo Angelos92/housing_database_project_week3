@@ -7,10 +7,11 @@ import json
 import os
 import re
 from decimal import Decimal
+from datetime import date, datetime
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
-OUT=ROOT/'output/real_data'
+OUT=ROOT/'output/housing_2025'
 DECIMAL_COLUMNS={'NumericValue','XCoordinate','YCoordinate','AverageWozThousandsEUR',
                  'RentalSharePct','CorporationSharePct','OtherLandlordSharePct'}
 
@@ -22,6 +23,8 @@ def canonical(row):
             row[key]=str(Decimal(str(value)).normalize())
         elif key=='RawValues' and isinstance(value,str):
             row[key]=json.loads(value)
+        elif isinstance(value, (date,datetime)):
+            row[key]=value.isoformat()
     return json.dumps(row,sort_keys=True,ensure_ascii=False,separators=(',',':'))
 
 
@@ -34,6 +37,8 @@ def import_data(args, password):
     if not re.fullmatch(r'[A-Za-z][A-Za-z0-9_]{0,63}',args.database):
         raise ValueError('Invalid database name; use a letter followed by letters, digits or underscores.')
     data=json.loads((OUT/'cleaned.json').read_text(encoding='utf-8'))
+    if data.get('schema_version') != 'housing2025-v1':
+        raise ValueError('Prepared data has an incompatible schema version. Run prepare_real_data.py again.')
     if data['rejected'] and not args.allow_rejected:
         raise ValueError('Quarantined rows exist. Review quality_report.json before using --allow-rejected.')
     expected=data['tables']
@@ -92,7 +97,7 @@ def main():
     parser.add_argument('--host',default='localhost')
     parser.add_argument('--port',type=int,default=3306)
     parser.add_argument('--user',default='root')
-    parser.add_argument('--database',default='housing_utrecht')
+    parser.add_argument('--database',default='housing_2025')
     parser.add_argument('--allow-rejected',action='store_true')
     parser.add_argument('--report',default='import_report.json')
     args=parser.parse_args()

@@ -1,0 +1,4078 @@
+{
+  "schema_version": "housing2025-v1",
+  "reconciliation": {
+    "housing2025": {
+      "selected": 153,
+      "accepted": 153,
+      "rejected": 0
+    },
+    "cbs2025": {
+      "selected": 184,
+      "accepted": 184,
+      "rejected": 0
+    }
+  },
+  "changes": [
+    {
+      "dataset": "housing2025",
+      "row": 15,
+      "field": "garden-size",
+      "raw": "Unspecified",
+      "cleaned": null,
+      "reason": "unspecified marker converted to NULL"
+    },
+    {
+      "dataset": "housing2025",
+      "row": 26,
+      "field": "garden-size",
+      "raw": "Unspecified",
+      "cleaned": null,
+      "reason": "unspecified marker converted to NULL"
+    },
+    {
+      "dataset": "housing2025",
+      "row": 39,
+      "field": "garden-size",
+      "raw": "Unspecified",
+      "cleaned": null,
+      "reason": "unspecified marker converted to NULL"
+    },
+    {
+      "dataset": "housing2025",
+      "row": 45,
+      "field": "garden-size",
+      "raw": "Unspecified",
+      "cleaned": null,
+      "reason": "unspecified marker converted to NULL"
+    },
+    {
+      "dataset": "housing2025",
+      "row": 47,
+      "field": "garden-size",
+      "raw": "Unspecified",
+      "cleaned": null,
+      "reason": "unspecified marker converted to NULL"
+    },
+    {
+      "dataset": "housing2025",
+      "row": 50,
+      "field": "garden-size",
+      "raw": "Unspecified",
+      "cleaned": null,
+      "reason": "unspecified marker converted to NULL"
+    },
+    {
+      "dataset": "housing2025",
+      "row": 51,
+      "field": "street",
+      "raw": "Voorsterbeeklaan ",
+      "cleaned": "Voorsterbeeklaan",
+      "reason": "Trim surrounding whitespace"
+    },
+    {
+      "dataset": "housing2025",
+      "row": 52,
+      "field": "garden-size",
+      "raw": "Unspecified",
+      "cleaned": null,
+      "reason": "unspecified marker converted to NULL"
+    },
+    {
+      "dataset": "housing2025",
+      "row": 52,
+      "field": "street",
+      "raw": "Merwedekade ",
+      "cleaned": "Merwedekade",
+      "reason": "Trim surrounding whitespace"
+    },
+    {
+      "dataset": "housing2025",
+      "row": 53,
+      "field": "street",
+      "raw": "Merwedekade ",
+      "cleaned": "Merwedekade",
+      "reason": "Trim surrounding whitespace"
+    },
+    {
+      "dataset": "housing2025",
+      "row": 54,
+      "field": "street",
+      "raw": "Merwedekade ",
+      "cleaned": "Merwedekade",
+      "reason": "Trim surrounding whitespace"
+    },
+    {
+      "dataset": "housing2025",
+      "row": 55,
+      "field": "street",
+      "raw": "Merwedekade ",
+      "cleaned": "Merwedekade",
+      "reason": "Trim surrounding whitespace"
+    },
+    {
+      "dataset": "housing2025",
+      "row": 56,
+      "field": "street",
+      "raw": "Merwedekade ",
+      "cleaned": "Merwedekade",
+      "reason": "Trim surrounding whitespace"
+    },
+    {
+      "dataset": "housing2025",
+      "row": 57,
+      "field": "street",
+      "raw": "Merwedekade ",
+      "cleaned": "Merwedekade",
+      "reason": "Trim surrounding whitespace"
+    },
+    {
+      "dataset": "housing2025",
+      "row": 58,
+      "field": "street",
+      "raw": "Merwedekade ",
+      "cleaned": "Merwedekade",
+      "reason": "Trim surrounding whitespace"
+    },
+    {
+      "dataset": "housing2025",
+      "row": 59,
+      "field": "street",
+      "raw": "Merwedekade ",
+      "cleaned": "Merwedekade",
+      "reason": "Trim surrounding whitespace"
+    },
+    {
+      "dataset": "housing2025",
+      "row": 60,
+      "field": "street",
+      "raw": "Seychellen ",
+      "cleaned": "Seychellen",
+      "reason": "Trim surrounding whitespace"
+    },
+    {
+      "dataset": "housing2025",
+      "row": 61,
+      "field": "street",
+      "raw": "Seychellen ",
+      "cleaned": "Seychellen",
+      "reason": "Trim surrounding whitespace"
+    },
+    {
+      "dataset": "housing2025",
+      "row": 62,
+      "field": "street",
+      "raw": "Eisenhowerlaan ",
+      "cleaned": "Eisenhowerlaan",
+      "reason": "Trim surrounding whitespace"
+    },
+    {
+      "dataset": "housing2025",
+      "row": 63,
+      "field": "street",
+      "raw": "Eisenhowerlaan ",
+      "cleaned": "Eisenhowerlaan",
+      "reason": "Trim surrounding whitespace"
+    },
+    {
+      "dataset": "housing2025",
+      "row": 64,
+      "field": "street",
+      "raw": "Eisenhowerlaan ",
+      "cleaned": "Eisenhowerlaan",
+      "reason": "Trim surrounding whitespace"
+    },
+    {
+      "dataset": "housing2025",
+      "row": 65,
+      "field": "street",
+      "raw": "Eisenhowerlaan ",
+      "cleaned": "Eisenhowerlaan",
+      "reason": "Trim surrounding whitespace"
+    },
+    {
+      "dataset": "housing2025",
+      "row": 66,
+      "field": "street",
+      "raw": "Eisenhowerlaan ",
+      "cleaned": "Eisenhowerlaan",
+      "reason": "Trim surrounding whitespace"
+    },
+    {
+      "dataset": "housing2025",
+      "row": 67,
+      "field": "street",
+      "raw": "Eisenhowerlaan ",
+      "cleaned": "Eisenhowerlaan",
+      "reason": "Trim surrounding whitespace"
+    },
+    {
+      "dataset": "housing2025",
+      "row": 68,
+      "field": "street",
+      "raw": "Eisenhowerlaan ",
+      "cleaned": "Eisenhowerlaan",
+      "reason": "Trim surrounding whitespace"
+    },
+    {
+      "dataset": "housing2025",
+      "row": 69,
+      "field": "street",
+      "raw": "Javastraat ",
+      "cleaned": "Javastraat",
+      "reason": "Trim surrounding whitespace"
+    },
+    {
+      "dataset": "housing2025",
+      "row": 70,
+      "field": "street",
+      "raw": "Javastraat ",
+      "cleaned": "Javastraat",
+      "reason": "Trim surrounding whitespace"
+    },
+    {
+      "dataset": "housing2025",
+      "row": 71,
+      "field": "street",
+      "raw": "Javastraat ",
+      "cleaned": "Javastraat",
+      "reason": "Trim surrounding whitespace"
+    },
+    {
+      "dataset": "housing2025",
+      "row": 72,
+      "field": "street",
+      "raw": "Javastraat ",
+      "cleaned": "Javastraat",
+      "reason": "Trim surrounding whitespace"
+    },
+    {
+      "dataset": "housing2025",
+      "row": 73,
+      "field": "street",
+      "raw": "Javastraat ",
+      "cleaned": "Javastraat",
+      "reason": "Trim surrounding whitespace"
+    },
+    {
+      "dataset": "housing2025",
+      "row": 74,
+      "field": "street",
+      "raw": "Javastraat ",
+      "cleaned": "Javastraat",
+      "reason": "Trim surrounding whitespace"
+    },
+    {
+      "dataset": "housing2025",
+      "row": 75,
+      "field": "street",
+      "raw": "Javastraat ",
+      "cleaned": "Javastraat",
+      "reason": "Trim surrounding whitespace"
+    },
+    {
+      "dataset": "housing2025",
+      "row": 80,
+      "field": "garden-size",
+      "raw": "Unspecified",
+      "cleaned": null,
+      "reason": "unspecified marker converted to NULL"
+    },
+    {
+      "dataset": "housing2025",
+      "row": 85,
+      "field": "garden-size",
+      "raw": "Unspecified",
+      "cleaned": null,
+      "reason": "unspecified marker converted to NULL"
+    },
+    {
+      "dataset": "housing2025",
+      "row": 85,
+      "field": "street",
+      "raw": "Klifrakplantsoen ",
+      "cleaned": "Klifrakplantsoen",
+      "reason": "Trim surrounding whitespace"
+    },
+    {
+      "dataset": "housing2025",
+      "row": 86,
+      "field": "street",
+      "raw": "Klifrakplantsoen ",
+      "cleaned": "Klifrakplantsoen",
+      "reason": "Trim surrounding whitespace"
+    },
+    {
+      "dataset": "housing2025",
+      "row": 87,
+      "field": "street",
+      "raw": "Klifrakplantsoen ",
+      "cleaned": "Klifrakplantsoen",
+      "reason": "Trim surrounding whitespace"
+    },
+    {
+      "dataset": "housing2025",
+      "row": 88,
+      "field": "street",
+      "raw": "Klifrakplantsoen ",
+      "cleaned": "Klifrakplantsoen",
+      "reason": "Trim surrounding whitespace"
+    },
+    {
+      "dataset": "housing2025",
+      "row": 89,
+      "field": "street",
+      "raw": "Bessemerlaan ",
+      "cleaned": "Bessemerlaan",
+      "reason": "Trim surrounding whitespace"
+    },
+    {
+      "dataset": "housing2025",
+      "row": 90,
+      "field": "street",
+      "raw": "Bessemerlaan ",
+      "cleaned": "Bessemerlaan",
+      "reason": "Trim surrounding whitespace"
+    },
+    {
+      "dataset": "housing2025",
+      "row": 91,
+      "field": "street",
+      "raw": "Bessemerlaan ",
+      "cleaned": "Bessemerlaan",
+      "reason": "Trim surrounding whitespace"
+    },
+    {
+      "dataset": "housing2025",
+      "row": 92,
+      "field": "street",
+      "raw": "Bessemerlaan ",
+      "cleaned": "Bessemerlaan",
+      "reason": "Trim surrounding whitespace"
+    },
+    {
+      "dataset": "housing2025",
+      "row": 93,
+      "field": "street",
+      "raw": "Bessemerlaan ",
+      "cleaned": "Bessemerlaan",
+      "reason": "Trim surrounding whitespace"
+    },
+    {
+      "dataset": "housing2025",
+      "row": 94,
+      "field": "street",
+      "raw": "Bessemerlaan ",
+      "cleaned": "Bessemerlaan",
+      "reason": "Trim surrounding whitespace"
+    },
+    {
+      "dataset": "housing2025",
+      "row": 110,
+      "field": "energyeff",
+      "raw": "Unspecified",
+      "cleaned": null,
+      "reason": "unspecified marker converted to NULL"
+    },
+    {
+      "dataset": "housing2025",
+      "row": 110,
+      "field": "energylabel",
+      "raw": "Unspecified",
+      "cleaned": null,
+      "reason": "unspecified marker converted to NULL"
+    },
+    {
+      "dataset": "housing2025",
+      "row": 114,
+      "field": "garden-size",
+      "raw": "",
+      "cleaned": null,
+      "reason": "blank marker converted to NULL"
+    },
+    {
+      "dataset": "housing2025",
+      "row": 114,
+      "field": "energyeff",
+      "raw": "Unspecified",
+      "cleaned": null,
+      "reason": "unspecified marker converted to NULL"
+    },
+    {
+      "dataset": "housing2025",
+      "row": 114,
+      "field": "energylabel",
+      "raw": "Unspecified",
+      "cleaned": null,
+      "reason": "unspecified marker converted to NULL"
+    },
+    {
+      "dataset": "housing2025",
+      "row": 116,
+      "field": "garden-size",
+      "raw": "",
+      "cleaned": null,
+      "reason": "blank marker converted to NULL"
+    },
+    {
+      "dataset": "housing2025",
+      "row": 139,
+      "field": "street",
+      "raw": "Dassenburcht ",
+      "cleaned": "Dassenburcht",
+      "reason": "Trim surrounding whitespace"
+    },
+    {
+      "dataset": "housing2025",
+      "row": 140,
+      "field": "street",
+      "raw": "Dassenburcht ",
+      "cleaned": "Dassenburcht",
+      "reason": "Trim surrounding whitespace"
+    },
+    {
+      "dataset": "housing2025",
+      "row": 141,
+      "field": "street",
+      "raw": "Dassenburcht ",
+      "cleaned": "Dassenburcht",
+      "reason": "Trim surrounding whitespace"
+    },
+    {
+      "dataset": "housing2025",
+      "row": 142,
+      "field": "street",
+      "raw": "Dassenburcht ",
+      "cleaned": "Dassenburcht",
+      "reason": "Trim surrounding whitespace"
+    },
+    {
+      "dataset": "housing2025",
+      "row": 145,
+      "field": "garden-size",
+      "raw": "Unspecified",
+      "cleaned": null,
+      "reason": "unspecified marker converted to NULL"
+    },
+    {
+      "dataset": "housing2025",
+      "row": 154,
+      "field": "energyeff",
+      "raw": "Unspecified",
+      "cleaned": null,
+      "reason": "unspecified marker converted to NULL"
+    },
+    {
+      "dataset": "housing2025",
+      "row": 154,
+      "field": "energylabel",
+      "raw": "Unspecified",
+      "cleaned": null,
+      "reason": "unspecified marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 4804,
+      "field": "pst_mvp",
+      "raw": null,
+      "cleaned": null,
+      "reason": "blank marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 4805,
+      "field": "pst_mvp",
+      "raw": null,
+      "cleaned": null,
+      "reason": "blank marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 4817,
+      "field": "pst_mvp",
+      "raw": null,
+      "cleaned": null,
+      "reason": "blank marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 4831,
+      "field": "pst_mvp",
+      "raw": null,
+      "cleaned": null,
+      "reason": "blank marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 4842,
+      "field": "pst_mvp",
+      "raw": null,
+      "cleaned": null,
+      "reason": "blank marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 4854,
+      "field": "pst_mvp",
+      "raw": null,
+      "cleaned": null,
+      "reason": "blank marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 4867,
+      "field": "g_wozbag",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 4868,
+      "field": "pst_mvp",
+      "raw": null,
+      "cleaned": null,
+      "reason": "blank marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 4880,
+      "field": "pst_mvp",
+      "raw": null,
+      "cleaned": null,
+      "reason": "blank marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 4889,
+      "field": "pst_mvp",
+      "raw": null,
+      "cleaned": null,
+      "reason": "blank marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 4897,
+      "field": "pst_mvp",
+      "raw": null,
+      "cleaned": null,
+      "reason": "blank marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 4898,
+      "field": "g_wozbag",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 4898,
+      "field": "p_huurw",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 4898,
+      "field": "p_wcorpw",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 4898,
+      "field": "p_ov_hw",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 4911,
+      "field": "g_wozbag",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 4911,
+      "field": "p_huurw",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 4911,
+      "field": "p_wcorpw",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 4911,
+      "field": "p_ov_hw",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 4912,
+      "field": "g_wozbag",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 4912,
+      "field": "p_huurw",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 4912,
+      "field": "p_wcorpw",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 4912,
+      "field": "p_ov_hw",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 4913,
+      "field": "pst_mvp",
+      "raw": null,
+      "cleaned": null,
+      "reason": "blank marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 4914,
+      "field": "g_wozbag",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5082,
+      "field": "pst_mvp",
+      "raw": null,
+      "cleaned": null,
+      "reason": "blank marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5083,
+      "field": "pst_mvp",
+      "raw": null,
+      "cleaned": null,
+      "reason": "blank marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5087,
+      "field": "pst_mvp",
+      "raw": null,
+      "cleaned": null,
+      "reason": "blank marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5090,
+      "field": "pst_mvp",
+      "raw": null,
+      "cleaned": null,
+      "reason": "blank marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5094,
+      "field": "pst_mvp",
+      "raw": null,
+      "cleaned": null,
+      "reason": "blank marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5098,
+      "field": "pst_mvp",
+      "raw": null,
+      "cleaned": null,
+      "reason": "blank marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5102,
+      "field": "pst_mvp",
+      "raw": null,
+      "cleaned": null,
+      "reason": "blank marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5104,
+      "field": "pst_mvp",
+      "raw": null,
+      "cleaned": null,
+      "reason": "blank marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5106,
+      "field": "pst_mvp",
+      "raw": null,
+      "cleaned": null,
+      "reason": "blank marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5110,
+      "field": "g_wozbag",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5110,
+      "field": "p_huurw",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5110,
+      "field": "p_wcorpw",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5110,
+      "field": "p_ov_hw",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5111,
+      "field": "pst_mvp",
+      "raw": null,
+      "cleaned": null,
+      "reason": "blank marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5115,
+      "field": "pst_mvp",
+      "raw": null,
+      "cleaned": null,
+      "reason": "blank marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5118,
+      "field": "pst_mvp",
+      "raw": null,
+      "cleaned": null,
+      "reason": "blank marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5120,
+      "field": "pst_mvp",
+      "raw": null,
+      "cleaned": null,
+      "reason": "blank marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5123,
+      "field": "pst_mvp",
+      "raw": null,
+      "cleaned": null,
+      "reason": "blank marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5125,
+      "field": "g_wozbag",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5125,
+      "field": "p_huurw",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5125,
+      "field": "p_wcorpw",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5125,
+      "field": "p_ov_hw",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5125,
+      "field": "pst_mvp",
+      "raw": null,
+      "cleaned": null,
+      "reason": "blank marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5126,
+      "field": "g_wozbag",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5126,
+      "field": "p_huurw",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5126,
+      "field": "p_wcorpw",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5126,
+      "field": "p_ov_hw",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5127,
+      "field": "pst_mvp",
+      "raw": null,
+      "cleaned": null,
+      "reason": "blank marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5129,
+      "field": "g_wozbag",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5129,
+      "field": "p_huurw",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5129,
+      "field": "p_wcorpw",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5129,
+      "field": "p_ov_hw",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5129,
+      "field": "pst_mvp",
+      "raw": null,
+      "cleaned": null,
+      "reason": "blank marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5130,
+      "field": "g_wozbag",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5130,
+      "field": "p_huurw",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5130,
+      "field": "p_wcorpw",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5130,
+      "field": "p_ov_hw",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5131,
+      "field": "g_wozbag",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5131,
+      "field": "pst_mvp",
+      "raw": null,
+      "cleaned": null,
+      "reason": "blank marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5132,
+      "field": "g_wozbag",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5132,
+      "field": "p_huurw",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5132,
+      "field": "p_wcorpw",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5132,
+      "field": "p_ov_hw",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5133,
+      "field": "g_wozbag",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5134,
+      "field": "pst_mvp",
+      "raw": null,
+      "cleaned": null,
+      "reason": "blank marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5136,
+      "field": "g_wozbag",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5136,
+      "field": "p_huurw",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5136,
+      "field": "p_wcorpw",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5136,
+      "field": "p_ov_hw",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5136,
+      "field": "pst_mvp",
+      "raw": null,
+      "cleaned": null,
+      "reason": "blank marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5137,
+      "field": "g_wozbag",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5137,
+      "field": "p_huurw",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5137,
+      "field": "p_wcorpw",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5137,
+      "field": "p_ov_hw",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5138,
+      "field": "g_wozbag",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5138,
+      "field": "p_huurw",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5138,
+      "field": "p_wcorpw",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5138,
+      "field": "p_ov_hw",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5138,
+      "field": "pst_mvp",
+      "raw": null,
+      "cleaned": null,
+      "reason": "blank marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5139,
+      "field": "g_wozbag",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5139,
+      "field": "p_huurw",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5139,
+      "field": "p_wcorpw",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5139,
+      "field": "p_ov_hw",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5140,
+      "field": "g_wozbag",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5140,
+      "field": "pst_mvp",
+      "raw": null,
+      "cleaned": null,
+      "reason": "blank marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5141,
+      "field": "g_wozbag",
+      "raw": ".",
+      "cleaned": null,
+      "reason": "dot marker converted to NULL"
+    },
+    {
+      "dataset": "cbs2025",
+      "row": 5142,
+      "field": "pst_mvp",
+      "raw": null,
+      "cleaned": null,
+      "reason": "blank marker converted to NULL"
+    }
+  ],
+  "rejected": [],
+  "profile": {
+    "housing2025": {
+      "id": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "str": 153
+        },
+        "whitespace_values": 0,
+        "unique_values": 153,
+        "values": null,
+        "numeric_min": "5000",
+        "numeric_max": "5154",
+        "non_numeric_examples": []
+      },
+      "zipcode4": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "str": 153
+        },
+        "whitespace_values": 0,
+        "unique_values": 26,
+        "values": null,
+        "numeric_min": "3438",
+        "numeric_max": "3584",
+        "non_numeric_examples": []
+      },
+      "zipcode6": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "str": 153
+        },
+        "whitespace_values": 0,
+        "unique_values": 71,
+        "values": null,
+        "numeric_min": null,
+        "numeric_max": null,
+        "non_numeric_examples": [
+          "3544MC",
+          "3544MV",
+          "3544NX",
+          "3553BM",
+          "3553CM"
+        ]
+      },
+      "zipcode6id": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "str": 153
+        },
+        "whitespace_values": 0,
+        "unique_values": 153,
+        "values": null,
+        "numeric_min": null,
+        "numeric_max": null,
+        "non_numeric_examples": [
+          "3544MC000",
+          "3544MC001",
+          "3544MC002",
+          "3544MV003",
+          "3544MV004"
+        ]
+      },
+      "housetype": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "str": 153
+        },
+        "whitespace_values": 0,
+        "unique_values": 2,
+        "values": {
+          "woonhuis": 81,
+          "appartement": 72
+        },
+        "numeric_min": null,
+        "numeric_max": null,
+        "non_numeric_examples": [
+          "woonhuis",
+          "appartement"
+        ]
+      },
+      "lot-area": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "str": 153
+        },
+        "whitespace_values": 0,
+        "unique_values": 61,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "400",
+        "non_numeric_examples": []
+      },
+      "house-area": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "str": 153
+        },
+        "whitespace_values": 0,
+        "unique_values": 89,
+        "values": null,
+        "numeric_min": "28",
+        "numeric_max": "204",
+        "non_numeric_examples": []
+      },
+      "garden-size": {
+        "blank": 2,
+        "dot": 0,
+        "unspecified": 10,
+        "python_types": {
+          "str": 153
+        },
+        "whitespace_values": 0,
+        "unique_values": 57,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "162",
+        "non_numeric_examples": []
+      },
+      "rooms": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "str": 153
+        },
+        "whitespace_values": 0,
+        "unique_values": 8,
+        "values": {
+          "5": 29,
+          "7": 6,
+          "4": 32,
+          "3": 36,
+          "2": 22,
+          "6": 23,
+          "1": 4,
+          "8": 1
+        },
+        "numeric_min": "1",
+        "numeric_max": "8",
+        "non_numeric_examples": []
+      },
+      "bathrooms": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "str": 153
+        },
+        "whitespace_values": 0,
+        "unique_values": 2,
+        "values": {
+          "1": 139,
+          "2": 14
+        },
+        "numeric_min": "1",
+        "numeric_max": "2",
+        "non_numeric_examples": []
+      },
+      "x-coor": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "str": 153
+        },
+        "whitespace_values": 0,
+        "unique_values": 109,
+        "values": null,
+        "numeric_min": "52.0465",
+        "numeric_max": "52.1131",
+        "non_numeric_examples": []
+      },
+      "y-coor": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "str": 153
+        },
+        "whitespace_values": 0,
+        "unique_values": 118,
+        "values": null,
+        "numeric_min": "5.0000",
+        "numeric_max": "5.1505",
+        "non_numeric_examples": []
+      },
+      "buildyear": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "str": 153
+        },
+        "whitespace_values": 0,
+        "unique_values": 57,
+        "values": null,
+        "numeric_min": "1320",
+        "numeric_max": "2019",
+        "non_numeric_examples": []
+      },
+      "retailvalue": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "str": 153
+        },
+        "whitespace_values": 0,
+        "unique_values": 122,
+        "values": null,
+        "numeric_min": "225",
+        "numeric_max": "1050",
+        "non_numeric_examples": []
+      },
+      "askingprice": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "str": 153
+        },
+        "whitespace_values": 0,
+        "unique_values": 78,
+        "values": null,
+        "numeric_min": "225",
+        "numeric_max": "995",
+        "non_numeric_examples": []
+      },
+      "energylabel": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 3,
+        "python_types": {
+          "str": 153
+        },
+        "whitespace_values": 0,
+        "unique_values": 10,
+        "values": {
+          "A+": 12,
+          "A": 61,
+          "D": 16,
+          "F": 8,
+          "B": 19,
+          "C": 22,
+          "E": 8,
+          "G": 2,
+          "A++": 2,
+          "Unspecified": 3
+        },
+        "numeric_min": null,
+        "numeric_max": null,
+        "non_numeric_examples": [
+          "A+",
+          "A",
+          "D",
+          "F",
+          "B"
+        ]
+      },
+      "energyeff": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 3,
+        "python_types": {
+          "str": 153
+        },
+        "whitespace_values": 0,
+        "unique_values": 3,
+        "values": {
+          "1": 75,
+          "0": 75,
+          "Unspecified": 3
+        },
+        "numeric_min": "0",
+        "numeric_max": "1",
+        "non_numeric_examples": []
+      },
+      "valuationdate": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "str": 153
+        },
+        "whitespace_values": 0,
+        "unique_values": 98,
+        "values": null,
+        "numeric_min": null,
+        "numeric_max": null,
+        "non_numeric_examples": [
+          "2024-05-01",
+          "2024-04-04",
+          "2024-02-02",
+          "2024-10-28",
+          "2024-08-01"
+        ]
+      },
+      "street": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "str": 153
+        },
+        "whitespace_values": 39,
+        "unique_values": 45,
+        "values": null,
+        "numeric_min": null,
+        "numeric_max": null,
+        "non_numeric_examples": [
+          "Kees van Bohemenhof",
+          "van der Broekstraat",
+          "Pablo Picassostraat",
+          "Edisonstraat",
+          "Amperestraat"
+        ]
+      },
+      "subdistrict": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "str": 153
+        },
+        "whitespace_values": 0,
+        "unique_values": 25,
+        "values": null,
+        "numeric_min": null,
+        "numeric_max": null,
+        "non_numeric_examples": [
+          "Het Zand-Parkwijk-Langerak",
+          "Zuilen-west",
+          "Rijnsweerd",
+          "Lunetten",
+          "Dichterswijk"
+        ]
+      },
+      "district": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "str": 153
+        },
+        "whitespace_values": 0,
+        "unique_values": 11,
+        "values": {
+          "Leidsche Rijn": 25,
+          "Noord-West": 16,
+          "Oost": 7,
+          "Zuid": 7,
+          "Zuid-West": 37,
+          "West": 15,
+          "Overvecht": 5,
+          "Noord-Oost": 9,
+          "Blokhoeve-Nieuwegein": 8,
+          "Binnenstad": 7,
+          "Vleuten-De Meern": 17
+        },
+        "numeric_min": null,
+        "numeric_max": null,
+        "non_numeric_examples": [
+          "Leidsche Rijn",
+          "Noord-West",
+          "Oost",
+          "Zuid",
+          "Zuid-West"
+        ]
+      },
+      "city": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "str": 153
+        },
+        "whitespace_values": 0,
+        "unique_values": 4,
+        "values": {
+          "Utrecht": 128,
+          "Nieuwegein": 8,
+          "Vleuten": 15,
+          "De Meern": 2
+        },
+        "numeric_min": null,
+        "numeric_max": null,
+        "non_numeric_examples": [
+          "Utrecht",
+          "Nieuwegein",
+          "Vleuten",
+          "De Meern"
+        ]
+      },
+      "dist-from-train": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "str": 153
+        },
+        "whitespace_values": 0,
+        "unique_values": 112,
+        "values": null,
+        "numeric_min": "0.68",
+        "numeric_max": "7.57",
+        "non_numeric_examples": []
+      }
+    },
+    "cbs_selected": {
+      "gwb_code_10": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "str": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 184,
+        "values": null,
+        "numeric_min": null,
+        "numeric_max": null,
+        "non_numeric_examples": [
+          "GM0344",
+          "WK034401",
+          "BU03440111",
+          "BU03440112",
+          "BU03440113"
+        ]
+      },
+      "gwb_code_8": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "str": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 184,
+        "values": null,
+        "numeric_min": "344",
+        "numeric_max": "3562500",
+        "non_numeric_examples": []
+      },
+      "regio": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "str": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 171,
+        "values": null,
+        "numeric_min": null,
+        "numeric_max": null,
+        "non_numeric_examples": [
+          "Utrecht",
+          "Wijk 01 West",
+          "Welgelegen, Den Hommel",
+          "Oog in Al",
+          "Halve Maan-Zuid"
+        ]
+      },
+      "gm_naam": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "str": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 2,
+        "values": {
+          "Utrecht": 122,
+          "Nieuwegein": 62
+        },
+        "numeric_min": null,
+        "numeric_max": null,
+        "non_numeric_examples": [
+          "Utrecht",
+          "Nieuwegein"
+        ]
+      },
+      "recs": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "str": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 3,
+        "values": {
+          "Gemeente": 2,
+          "Wijk": 32,
+          "Buurt": 150
+        },
+        "numeric_min": null,
+        "numeric_max": null,
+        "non_numeric_examples": [
+          "Gemeente",
+          "Wijk",
+          "Buurt"
+        ]
+      },
+      "gwb_code": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "str": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 184,
+        "values": null,
+        "numeric_min": null,
+        "numeric_max": null,
+        "non_numeric_examples": [
+          "GM0344",
+          "WK034401",
+          "BU03440111",
+          "BU03440112",
+          "BU03440113"
+        ]
+      },
+      "ind_wbi": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "int": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 1,
+        "values": {
+          "1": 184
+        },
+        "numeric_min": "1",
+        "numeric_max": "1",
+        "non_numeric_examples": []
+      },
+      "a_inw": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "int": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 161,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "376757",
+        "non_numeric_examples": []
+      },
+      "a_man": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "int": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 157,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "184213",
+        "non_numeric_examples": []
+      },
+      "a_vrouw": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "int": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 157,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "192544",
+        "non_numeric_examples": []
+      },
+      "a_00_14": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "int": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 119,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "58609",
+        "non_numeric_examples": []
+      },
+      "a_15_24": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "int": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 116,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "57783",
+        "non_numeric_examples": []
+      },
+      "a_25_44": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "int": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 155,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "138756",
+        "non_numeric_examples": []
+      },
+      "a_45_64": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "int": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 142,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "80142",
+        "non_numeric_examples": []
+      },
+      "a_65_oo": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "int": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 125,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "41467",
+        "non_numeric_examples": []
+      },
+      "a_ongeh": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "int": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 162,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "246864",
+        "non_numeric_examples": []
+      },
+      "a_gehuwd": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "int": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 149,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "98956",
+        "non_numeric_examples": []
+      },
+      "a_gesch": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "int": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 89,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "21620",
+        "non_numeric_examples": []
+      },
+      "a_verwed": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "int": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 58,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "9317",
+        "non_numeric_examples": []
+      },
+      "a_nl_all": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "int": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 155,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "222747",
+        "non_numeric_examples": []
+      },
+      "a_eur_al": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "int": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 115,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "41247",
+        "non_numeric_examples": []
+      },
+      "a_neu_al": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "int": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 147,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "112763",
+        "non_numeric_examples": []
+      },
+      "a_geb_nl": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "int": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 155,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "222747",
+        "non_numeric_examples": []
+      },
+      "a_geb_eu": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "int": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 66,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "13604",
+        "non_numeric_examples": []
+      },
+      "a_geb_ne": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "int": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 119,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "51379",
+        "non_numeric_examples": []
+      },
+      "a_gbl_eu": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "int": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 93,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "27643",
+        "non_numeric_examples": []
+      },
+      "a_gbl_ne": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "int": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 123,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "61384",
+        "non_numeric_examples": []
+      },
+      "a_geb": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "int": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 34,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "4247",
+        "non_numeric_examples": []
+      },
+      "p_geb": {
+        "blank": 0,
+        "dot": 1,
+        "unspecified": 0,
+        "python_types": {
+          "int": 183,
+          "str": 1
+        },
+        "whitespace_values": 0,
+        "unique_values": 9,
+        "values": {
+          "11": 2,
+          "10": 71,
+          "5": 34,
+          "15": 39,
+          "0": 21,
+          "20": 11,
+          "25": 4,
+          ".": 1,
+          "35": 1
+        },
+        "numeric_min": "0",
+        "numeric_max": "35",
+        "non_numeric_examples": []
+      },
+      "a_ste": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "int": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 30,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "2060",
+        "non_numeric_examples": []
+      },
+      "p_ste": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "int": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 8,
+        "values": {
+          "5": 92,
+          "20": 5,
+          "0": 40,
+          "10": 34,
+          "15": 9,
+          "8": 1,
+          "30": 2,
+          "25": 1
+        },
+        "numeric_min": "0",
+        "numeric_max": "30",
+        "non_numeric_examples": []
+      },
+      "a_hh": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "int": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 149,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "194040",
+        "non_numeric_examples": []
+      },
+      "a_1p_hh": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "int": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 136,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "100166",
+        "non_numeric_examples": []
+      },
+      "a_hh_z_k": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "int": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 110,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "43398",
+        "non_numeric_examples": []
+      },
+      "a_hh_m_k": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "int": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 119,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "50476",
+        "non_numeric_examples": []
+      },
+      "g_hhgro": {
+        "blank": 0,
+        "dot": 1,
+        "unspecified": 0,
+        "python_types": {
+          "float": 167,
+          "int": 16,
+          "str": 1
+        },
+        "whitespace_values": 0,
+        "unique_values": 24,
+        "values": null,
+        "numeric_min": "1",
+        "numeric_max": "3.2",
+        "non_numeric_examples": []
+      },
+      "bev_dich": {
+        "blank": 0,
+        "dot": 3,
+        "unspecified": 0,
+        "python_types": {
+          "int": 181,
+          "str": 3
+        },
+        "whitespace_values": 0,
+        "unique_values": 170,
+        "values": null,
+        "numeric_min": "10",
+        "numeric_max": "19375",
+        "non_numeric_examples": []
+      },
+      "a_woning": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "int": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 168,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "168736",
+        "non_numeric_examples": []
+      },
+      "a_nb_won": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "int": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 36,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "2681",
+        "non_numeric_examples": []
+      },
+      "a_vastg": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "int": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 135,
+        "values": null,
+        "numeric_min": "2",
+        "numeric_max": "15657",
+        "non_numeric_examples": []
+      },
+      "a_nb_vastg": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "int": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 21,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "217",
+        "non_numeric_examples": []
+      },
+      "g_wozbag": {
+        "blank": 0,
+        "dot": 19,
+        "unspecified": 0,
+        "python_types": {
+          "int": 165,
+          "str": 19
+        },
+        "whitespace_values": 0,
+        "unique_values": 133,
+        "values": null,
+        "numeric_min": "223",
+        "numeric_max": "1136",
+        "non_numeric_examples": []
+      },
+      "p_1gezw": {
+        "blank": 0,
+        "dot": 13,
+        "unspecified": 0,
+        "python_types": {
+          "int": 171,
+          "str": 13
+        },
+        "whitespace_values": 0,
+        "unique_values": 81,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "100",
+        "non_numeric_examples": []
+      },
+      "p_1gezw_tw": {
+        "blank": 0,
+        "dot": 13,
+        "unspecified": 0,
+        "python_types": {
+          "int": 171,
+          "str": 13
+        },
+        "whitespace_values": 0,
+        "unique_values": 65,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "72",
+        "non_numeric_examples": []
+      },
+      "p_1gezw_hw": {
+        "blank": 0,
+        "dot": 13,
+        "unspecified": 0,
+        "python_types": {
+          "int": 171,
+          "str": 13
+        },
+        "whitespace_values": 0,
+        "unique_values": 30,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "29",
+        "non_numeric_examples": []
+      },
+      "p_1gezw_2w": {
+        "blank": 0,
+        "dot": 13,
+        "unspecified": 0,
+        "python_types": {
+          "int": 171,
+          "str": 13
+        },
+        "whitespace_values": 0,
+        "unique_values": 22,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "33",
+        "non_numeric_examples": []
+      },
+      "p_1gezw_vw": {
+        "blank": 0,
+        "dot": 13,
+        "unspecified": 0,
+        "python_types": {
+          "int": 171,
+          "str": 13
+        },
+        "whitespace_values": 0,
+        "unique_values": 23,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "70",
+        "non_numeric_examples": []
+      },
+      "p_mgezw": {
+        "blank": 0,
+        "dot": 13,
+        "unspecified": 0,
+        "python_types": {
+          "int": 171,
+          "str": 13
+        },
+        "whitespace_values": 0,
+        "unique_values": 81,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "100",
+        "non_numeric_examples": []
+      },
+      "p_leegsw": {
+        "blank": 0,
+        "dot": 13,
+        "unspecified": 0,
+        "python_types": {
+          "int": 171,
+          "str": 13
+        },
+        "whitespace_values": 0,
+        "unique_values": 19,
+        "values": null,
+        "numeric_min": "1",
+        "numeric_max": "27",
+        "non_numeric_examples": []
+      },
+      "p_koopw": {
+        "blank": 0,
+        "dot": 13,
+        "unspecified": 0,
+        "python_types": {
+          "int": 171,
+          "str": 13
+        },
+        "whitespace_values": 0,
+        "unique_values": 74,
+        "values": null,
+        "numeric_min": "1",
+        "numeric_max": "97",
+        "non_numeric_examples": []
+      },
+      "p_huurw": {
+        "blank": 0,
+        "dot": 13,
+        "unspecified": 0,
+        "python_types": {
+          "int": 171,
+          "str": 13
+        },
+        "whitespace_values": 0,
+        "unique_values": 73,
+        "values": null,
+        "numeric_min": "3",
+        "numeric_max": "99",
+        "non_numeric_examples": []
+      },
+      "p_wcorpw": {
+        "blank": 0,
+        "dot": 13,
+        "unspecified": 0,
+        "python_types": {
+          "int": 171,
+          "str": 13
+        },
+        "whitespace_values": 0,
+        "unique_values": 58,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "84",
+        "non_numeric_examples": []
+      },
+      "p_ov_hw": {
+        "blank": 0,
+        "dot": 13,
+        "unspecified": 0,
+        "python_types": {
+          "int": 171,
+          "str": 13
+        },
+        "whitespace_values": 0,
+        "unique_values": 52,
+        "values": null,
+        "numeric_min": "1",
+        "numeric_max": "97",
+        "non_numeric_examples": []
+      },
+      "p_bj_me10": {
+        "blank": 0,
+        "dot": 13,
+        "unspecified": 0,
+        "python_types": {
+          "int": 171,
+          "str": 13
+        },
+        "whitespace_values": 0,
+        "unique_values": 42,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "100",
+        "non_numeric_examples": []
+      },
+      "p_bj_mi10": {
+        "blank": 0,
+        "dot": 13,
+        "unspecified": 0,
+        "python_types": {
+          "int": 171,
+          "str": 13
+        },
+        "whitespace_values": 0,
+        "unique_values": 42,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "100",
+        "non_numeric_examples": []
+      },
+      "g_ele": {
+        "blank": 0,
+        "dot": 184,
+        "unspecified": 0,
+        "python_types": {
+          "str": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 1,
+        "values": {
+          ".": 184
+        },
+        "numeric_min": null,
+        "numeric_max": null,
+        "non_numeric_examples": []
+      },
+      "g_ele_tr": {
+        "blank": 0,
+        "dot": 184,
+        "unspecified": 0,
+        "python_types": {
+          "str": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 1,
+        "values": {
+          ".": 184
+        },
+        "numeric_min": null,
+        "numeric_max": null,
+        "non_numeric_examples": []
+      },
+      "g_gas": {
+        "blank": 0,
+        "dot": 184,
+        "unspecified": 0,
+        "python_types": {
+          "str": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 1,
+        "values": {
+          ".": 184
+        },
+        "numeric_min": null,
+        "numeric_max": null,
+        "non_numeric_examples": []
+      },
+      "p_stadsv": {
+        "blank": 0,
+        "dot": 184,
+        "unspecified": 0,
+        "python_types": {
+          "str": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 1,
+        "values": {
+          ".": 184
+        },
+        "numeric_min": null,
+        "numeric_max": null,
+        "non_numeric_examples": []
+      },
+      "p_won_z": {
+        "blank": 0,
+        "dot": 184,
+        "unspecified": 0,
+        "python_types": {
+          "str": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 1,
+        "values": {
+          ".": 184
+        },
+        "numeric_min": null,
+        "numeric_max": null,
+        "non_numeric_examples": []
+      },
+      "p_won_m": {
+        "blank": 0,
+        "dot": 184,
+        "unspecified": 0,
+        "python_types": {
+          "str": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 1,
+        "values": {
+          ".": 184
+        },
+        "numeric_min": null,
+        "numeric_max": null,
+        "non_numeric_examples": []
+      },
+      "p_won_zs": {
+        "blank": 0,
+        "dot": 184,
+        "unspecified": 0,
+        "python_types": {
+          "str": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 1,
+        "values": {
+          ".": 184
+        },
+        "numeric_min": null,
+        "numeric_max": null,
+        "non_numeric_examples": []
+      },
+      "p_won_ev": {
+        "blank": 0,
+        "dot": 184,
+        "unspecified": 0,
+        "python_types": {
+          "str": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 1,
+        "values": {
+          ".": 184
+        },
+        "numeric_min": null,
+        "numeric_max": null,
+        "non_numeric_examples": []
+      },
+      "a_lp_pub": {
+        "blank": 0,
+        "dot": 184,
+        "unspecified": 0,
+        "python_types": {
+          "str": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 1,
+        "values": {
+          ".": 184
+        },
+        "numeric_min": null,
+        "numeric_max": null,
+        "non_numeric_examples": []
+      },
+      "a_ons_po": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "int": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 77,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "31000",
+        "non_numeric_examples": []
+      },
+      "a_ons_vovavo": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "int": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 64,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "20010",
+        "non_numeric_examples": []
+      },
+      "a_ons_mbo": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "int": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 35,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "6800",
+        "non_numeric_examples": []
+      },
+      "a_ons_hbo": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "int": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 40,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "12260",
+        "non_numeric_examples": []
+      },
+      "a_ons_wo": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "int": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 58,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "20750",
+        "non_numeric_examples": []
+      },
+      "a_opl_bvm": {
+        "blank": 0,
+        "dot": 184,
+        "unspecified": 0,
+        "python_types": {
+          "str": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 1,
+        "values": {
+          ".": 184
+        },
+        "numeric_min": null,
+        "numeric_max": null,
+        "non_numeric_examples": []
+      },
+      "a_opl_hvm": {
+        "blank": 0,
+        "dot": 184,
+        "unspecified": 0,
+        "python_types": {
+          "str": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 1,
+        "values": {
+          ".": 184
+        },
+        "numeric_min": null,
+        "numeric_max": null,
+        "non_numeric_examples": []
+      },
+      "a_opl_hw": {
+        "blank": 0,
+        "dot": 184,
+        "unspecified": 0,
+        "python_types": {
+          "str": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 1,
+        "values": {
+          ".": 184
+        },
+        "numeric_min": null,
+        "numeric_max": null,
+        "non_numeric_examples": []
+      },
+      "a_arb_wz": {
+        "blank": 0,
+        "dot": 184,
+        "unspecified": 0,
+        "python_types": {
+          "str": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 1,
+        "values": {
+          ".": 184
+        },
+        "numeric_min": null,
+        "numeric_max": null,
+        "non_numeric_examples": []
+      },
+      "p_arb_pp": {
+        "blank": 0,
+        "dot": 184,
+        "unspecified": 0,
+        "python_types": {
+          "str": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 1,
+        "values": {
+          ".": 184
+        },
+        "numeric_min": null,
+        "numeric_max": null,
+        "non_numeric_examples": []
+      },
+      "p_arb_wn": {
+        "blank": 0,
+        "dot": 184,
+        "unspecified": 0,
+        "python_types": {
+          "str": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 1,
+        "values": {
+          ".": 184
+        },
+        "numeric_min": null,
+        "numeric_max": null,
+        "non_numeric_examples": []
+      },
+      "p_arb_wnv": {
+        "blank": 0,
+        "dot": 184,
+        "unspecified": 0,
+        "python_types": {
+          "str": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 1,
+        "values": {
+          ".": 184
+        },
+        "numeric_min": null,
+        "numeric_max": null,
+        "non_numeric_examples": []
+      },
+      "p_arb_wnf": {
+        "blank": 0,
+        "dot": 184,
+        "unspecified": 0,
+        "python_types": {
+          "str": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 1,
+        "values": {
+          ".": 184
+        },
+        "numeric_min": null,
+        "numeric_max": null,
+        "non_numeric_examples": []
+      },
+      "p_arb_zs": {
+        "blank": 0,
+        "dot": 184,
+        "unspecified": 0,
+        "python_types": {
+          "str": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 1,
+        "values": {
+          ".": 184
+        },
+        "numeric_min": null,
+        "numeric_max": null,
+        "non_numeric_examples": []
+      },
+      "a_inkont": {
+        "blank": 0,
+        "dot": 184,
+        "unspecified": 0,
+        "python_types": {
+          "str": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 1,
+        "values": {
+          ".": 184
+        },
+        "numeric_min": null,
+        "numeric_max": null,
+        "non_numeric_examples": []
+      },
+      "g_ink_po": {
+        "blank": 0,
+        "dot": 184,
+        "unspecified": 0,
+        "python_types": {
+          "str": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 1,
+        "values": {
+          ".": 184
+        },
+        "numeric_min": null,
+        "numeric_max": null,
+        "non_numeric_examples": []
+      },
+      "g_ink_pi": {
+        "blank": 0,
+        "dot": 184,
+        "unspecified": 0,
+        "python_types": {
+          "str": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 1,
+        "values": {
+          ".": 184
+        },
+        "numeric_min": null,
+        "numeric_max": null,
+        "non_numeric_examples": []
+      },
+      "p_ink_li": {
+        "blank": 0,
+        "dot": 184,
+        "unspecified": 0,
+        "python_types": {
+          "str": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 1,
+        "values": {
+          ".": 184
+        },
+        "numeric_min": null,
+        "numeric_max": null,
+        "non_numeric_examples": []
+      },
+      "p_ink_hi": {
+        "blank": 0,
+        "dot": 184,
+        "unspecified": 0,
+        "python_types": {
+          "str": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 1,
+        "values": {
+          ".": 184
+        },
+        "numeric_min": null,
+        "numeric_max": null,
+        "non_numeric_examples": []
+      },
+      "p_ink_ar": {
+        "blank": 0,
+        "dot": 184,
+        "unspecified": 0,
+        "python_types": {
+          "str": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 1,
+        "values": {
+          ".": 184
+        },
+        "numeric_min": null,
+        "numeric_max": null,
+        "non_numeric_examples": []
+      },
+      "p_ink_ba": {
+        "blank": 0,
+        "dot": 184,
+        "unspecified": 0,
+        "python_types": {
+          "str": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 1,
+        "values": {
+          ".": 184
+        },
+        "numeric_min": null,
+        "numeric_max": null,
+        "non_numeric_examples": []
+      },
+      "g_hh_sti": {
+        "blank": 0,
+        "dot": 184,
+        "unspecified": 0,
+        "python_types": {
+          "str": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 1,
+        "values": {
+          ".": 184
+        },
+        "numeric_min": null,
+        "numeric_max": null,
+        "non_numeric_examples": []
+      },
+      "p_hh_li": {
+        "blank": 0,
+        "dot": 184,
+        "unspecified": 0,
+        "python_types": {
+          "str": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 1,
+        "values": {
+          ".": 184
+        },
+        "numeric_min": null,
+        "numeric_max": null,
+        "non_numeric_examples": []
+      },
+      "p_hh_hi": {
+        "blank": 0,
+        "dot": 184,
+        "unspecified": 0,
+        "python_types": {
+          "str": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 1,
+        "values": {
+          ".": 184
+        },
+        "numeric_min": null,
+        "numeric_max": null,
+        "non_numeric_examples": []
+      },
+      "m_hh_ver": {
+        "blank": 0,
+        "dot": 184,
+        "unspecified": 0,
+        "python_types": {
+          "str": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 1,
+        "values": {
+          ".": 184
+        },
+        "numeric_min": null,
+        "numeric_max": null,
+        "non_numeric_examples": []
+      },
+      "a_soz_wb": {
+        "blank": 0,
+        "dot": 12,
+        "unspecified": 0,
+        "python_types": {
+          "int": 172,
+          "str": 12
+        },
+        "whitespace_values": 12,
+        "unique_values": 46,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "11020",
+        "non_numeric_examples": []
+      },
+      "a_soz_ao": {
+        "blank": 0,
+        "dot": 12,
+        "unspecified": 0,
+        "python_types": {
+          "int": 172,
+          "str": 12
+        },
+        "whitespace_values": 12,
+        "unique_values": 49,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "14540",
+        "non_numeric_examples": []
+      },
+      "a_soz_ww": {
+        "blank": 0,
+        "dot": 12,
+        "unspecified": 0,
+        "python_types": {
+          "int": 172,
+          "str": 12
+        },
+        "whitespace_values": 12,
+        "unique_values": 22,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "3870",
+        "non_numeric_examples": []
+      },
+      "a_soz_ow": {
+        "blank": 0,
+        "dot": 12,
+        "unspecified": 0,
+        "python_types": {
+          "int": 172,
+          "str": 12
+        },
+        "whitespace_values": 12,
+        "unique_values": 92,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "36440",
+        "non_numeric_examples": []
+      },
+      "a_jz_tn": {
+        "blank": 0,
+        "dot": 184,
+        "unspecified": 0,
+        "python_types": {
+          "str": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 1,
+        "values": {
+          ".": 184
+        },
+        "numeric_min": null,
+        "numeric_max": null,
+        "non_numeric_examples": []
+      },
+      "p_jz_tn": {
+        "blank": 0,
+        "dot": 184,
+        "unspecified": 0,
+        "python_types": {
+          "str": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 1,
+        "values": {
+          ".": 184
+        },
+        "numeric_min": null,
+        "numeric_max": null,
+        "non_numeric_examples": []
+      },
+      "a_wmo_t": {
+        "blank": 0,
+        "dot": 184,
+        "unspecified": 0,
+        "python_types": {
+          "str": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 1,
+        "values": {
+          ".": 184
+        },
+        "numeric_min": null,
+        "numeric_max": null,
+        "non_numeric_examples": []
+      },
+      "p_wmo_t": {
+        "blank": 0,
+        "dot": 184,
+        "unspecified": 0,
+        "python_types": {
+          "str": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 1,
+        "values": {
+          ".": 184
+        },
+        "numeric_min": null,
+        "numeric_max": null,
+        "non_numeric_examples": []
+      },
+      "a_bedv": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "int": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 129,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "62990",
+        "non_numeric_examples": []
+      },
+      "a_bed_a": {
+        "blank": 7,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "int": 177,
+          "str": 7
+        },
+        "whitespace_values": 7,
+        "unique_values": 7,
+        "values": {
+          "100": 1,
+          "0": 158,
+          "10": 5,
+          "5": 10,
+          "": 7,
+          "55": 1,
+          "20": 2
+        },
+        "numeric_min": "0",
+        "numeric_max": "100",
+        "non_numeric_examples": []
+      },
+      "a_bed_bf": {
+        "blank": 7,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "int": 177,
+          "str": 7
+        },
+        "whitespace_values": 7,
+        "unique_values": 37,
+        "values": null,
+        "numeric_min": "5",
+        "numeric_max": "4350",
+        "non_numeric_examples": []
+      },
+      "a_bed_gi": {
+        "blank": 7,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "int": 177,
+          "str": 7
+        },
+        "whitespace_values": 7,
+        "unique_values": 48,
+        "values": null,
+        "numeric_min": "5",
+        "numeric_max": "8015",
+        "non_numeric_examples": []
+      },
+      "a_bed_hj": {
+        "blank": 7,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "int": 177,
+          "str": 7
+        },
+        "whitespace_values": 7,
+        "unique_values": 43,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "7495",
+        "non_numeric_examples": []
+      },
+      "a_bed_kl": {
+        "blank": 7,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "int": 177,
+          "str": 7
+        },
+        "whitespace_values": 7,
+        "unique_values": 28,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "2210",
+        "non_numeric_examples": []
+      },
+      "a_bed_mn": {
+        "blank": 7,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "int": 177,
+          "str": 7
+        },
+        "whitespace_values": 7,
+        "unique_values": 76,
+        "values": null,
+        "numeric_min": "10",
+        "numeric_max": "19420",
+        "non_numeric_examples": []
+      },
+      "a_bed_oq": {
+        "blank": 7,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "int": 177,
+          "str": 7
+        },
+        "whitespace_values": 7,
+        "unique_values": 62,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "13110",
+        "non_numeric_examples": []
+      },
+      "a_bed_ru": {
+        "blank": 7,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "int": 177,
+          "str": 7
+        },
+        "whitespace_values": 7,
+        "unique_values": 49,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "8295",
+        "non_numeric_examples": []
+      },
+      "a_pau": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "int": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 147,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "124740",
+        "non_numeric_examples": []
+      },
+      "a_bst_b": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "int": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 138,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "89650",
+        "non_numeric_examples": []
+      },
+      "a_bst_nb": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "int": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 108,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "35090",
+        "non_numeric_examples": []
+      },
+      "g_pau_hh": {
+        "blank": 0,
+        "dot": 17,
+        "unspecified": 0,
+        "python_types": {
+          "float": 143,
+          "str": 17,
+          "int": 24
+        },
+        "whitespace_values": 0,
+        "unique_values": 18,
+        "values": null,
+        "numeric_min": "0.1",
+        "numeric_max": "2.1",
+        "non_numeric_examples": []
+      },
+      "g_pau_km": {
+        "blank": 0,
+        "dot": 17,
+        "unspecified": 0,
+        "python_types": {
+          "int": 167,
+          "str": 17
+        },
+        "whitespace_values": 0,
+        "unique_values": 157,
+        "values": null,
+        "numeric_min": "16",
+        "numeric_max": "12236",
+        "non_numeric_examples": []
+      },
+      "a_m2w": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "int": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 53,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "8290",
+        "non_numeric_examples": []
+      },
+      "g_afs_hp": {
+        "blank": 3,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "float": 169,
+          "int": 12,
+          "NoneType": 3
+        },
+        "whitespace_values": 0,
+        "unique_values": 27,
+        "values": null,
+        "numeric_min": "0.3",
+        "numeric_max": "4.5",
+        "non_numeric_examples": []
+      },
+      "g_afs_gs": {
+        "blank": 3,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "float": 174,
+          "int": 7,
+          "NoneType": 3
+        },
+        "whitespace_values": 0,
+        "unique_values": 24,
+        "values": null,
+        "numeric_min": "0.2",
+        "numeric_max": "3.7",
+        "non_numeric_examples": []
+      },
+      "g_afs_kv": {
+        "blank": 3,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "float": 173,
+          "int": 8,
+          "NoneType": 3
+        },
+        "whitespace_values": 0,
+        "unique_values": 21,
+        "values": null,
+        "numeric_min": "0.1",
+        "numeric_max": "3.1",
+        "non_numeric_examples": []
+      },
+      "g_afs_sc": {
+        "blank": 3,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "float": 168,
+          "int": 13,
+          "NoneType": 3
+        },
+        "whitespace_values": 0,
+        "unique_values": 23,
+        "values": null,
+        "numeric_min": "0.3",
+        "numeric_max": "3.9",
+        "non_numeric_examples": []
+      },
+      "g_3km_sc": {
+        "blank": 3,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "int": 26,
+          "float": 155,
+          "NoneType": 3
+        },
+        "whitespace_values": 0,
+        "unique_values": 135,
+        "values": null,
+        "numeric_min": "0.1",
+        "numeric_max": "34.9",
+        "non_numeric_examples": []
+      },
+      "a_opp_ha": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "int": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 112,
+        "values": null,
+        "numeric_min": "5",
+        "numeric_max": "9921",
+        "non_numeric_examples": []
+      },
+      "a_lan_ha": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "int": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 107,
+        "values": null,
+        "numeric_min": "4",
+        "numeric_max": "9377",
+        "non_numeric_examples": []
+      },
+      "a_wat_ha": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "int": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 35,
+        "values": null,
+        "numeric_min": "0",
+        "numeric_max": "544",
+        "non_numeric_examples": []
+      },
+      "pst_mvp": {
+        "blank": 34,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "NoneType": 34,
+          "int": 150
+        },
+        "whitespace_values": 0,
+        "unique_values": 57,
+        "values": null,
+        "numeric_min": "3431",
+        "numeric_max": "3585",
+        "non_numeric_examples": []
+      },
+      "pst_dekp": {
+        "blank": 34,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "NoneType": 34,
+          "int": 150
+        },
+        "whitespace_values": 0,
+        "unique_values": 6,
+        "values": {
+          "": 34,
+          "1": 120,
+          "3": 8,
+          "2": 16,
+          "4": 4,
+          "5": 2
+        },
+        "numeric_min": "1",
+        "numeric_max": "5",
+        "non_numeric_examples": []
+      },
+      "ste_mvs": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "int": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 5,
+        "values": {
+          "1": 101,
+          "4": 15,
+          "3": 18,
+          "2": 44,
+          "5": 6
+        },
+        "numeric_min": "1",
+        "numeric_max": "5",
+        "non_numeric_examples": []
+      },
+      "ste_oad": {
+        "blank": 0,
+        "dot": 0,
+        "unspecified": 0,
+        "python_types": {
+          "int": 184
+        },
+        "whitespace_values": 0,
+        "unique_values": 170,
+        "values": null,
+        "numeric_min": "119",
+        "numeric_max": "6583",
+        "non_numeric_examples": []
+      }
+    },
+    "cbs_selected_municipalities": [
+      "Utrecht",
+      "Nieuwegein"
+    ],
+    "cbs_total_rows": 18495,
+    "cbs_region_levels": {
+      "Land": 1,
+      "Gemeente": 342,
+      "Wijk": 3423,
+      "Buurt": 14729
+    },
+    "cbs_duplicate_ids": {},
+    "cbs_missing_all_columns": {
+      "ind_wbi": 1,
+      "g_ele": 18495,
+      "g_ele_tr": 18495,
+      "g_gas": 18495,
+      "p_stadsv": 18495,
+      "p_won_z": 18495,
+      "p_won_m": 18495,
+      "p_won_zs": 18495,
+      "p_won_ev": 18495,
+      "a_lp_pub": 18495,
+      "a_opl_bvm": 18495,
+      "a_opl_hvm": 18495,
+      "a_opl_hw": 18495,
+      "a_arb_wz": 18495,
+      "p_arb_pp": 18495,
+      "p_arb_wn": 18495,
+      "p_arb_wnv": 18495,
+      "p_arb_wnf": 18495,
+      "p_arb_zs": 18495,
+      "a_inkont": 18495,
+      "g_ink_po": 18495,
+      "g_ink_pi": 18495,
+      "p_ink_li": 18495,
+      "p_ink_hi": 18495,
+      "p_ink_ar": 18495,
+      "p_ink_ba": 18495,
+      "g_hh_sti": 18495,
+      "p_hh_li": 18495,
+      "p_hh_hi": 18495,
+      "m_hh_ver": 18495,
+      "a_jz_tn": 18495,
+      "p_jz_tn": 18495,
+      "a_wmo_t": 18495,
+      "p_wmo_t": 18495,
+      "pst_mvp": 3865,
+      "pst_dekp": 3864,
+      "g_wozbag": 1965,
+      "p_1gezw": 1796,
+      "p_1gezw_tw": 1796,
+      "p_1gezw_hw": 1796,
+      "p_1gezw_2w": 1796,
+      "p_1gezw_vw": 1796,
+      "p_mgezw": 1796,
+      "p_leegsw": 1796,
+      "p_koopw": 1798,
+      "p_huurw": 1798,
+      "p_wcorpw": 1798,
+      "p_ov_hw": 1798,
+      "p_bj_me10": 1796,
+      "p_bj_mi10": 1796,
+      "a_soz_wb": 1656,
+      "a_soz_ao": 1656,
+      "a_soz_ww": 1656,
+      "a_soz_ow": 1656,
+      "a_bed_a": 2005,
+      "a_bed_bf": 2005,
+      "a_bed_gi": 2005,
+      "a_bed_hj": 2005,
+      "a_bed_kl": 2005,
+      "a_bed_mn": 2005,
+      "a_bed_oq": 2005,
+      "a_bed_ru": 2005,
+      "g_pau_hh": 3234,
+      "g_pau_km": 3234,
+      "bev_dich": 811,
+      "g_afs_hp": 818,
+      "g_afs_gs": 818,
+      "g_afs_kv": 818,
+      "g_afs_sc": 818,
+      "g_3km_sc": 818,
+      "p_geb": 13,
+      "g_hhgro": 458,
+      "p_ste": 13,
+      "ste_mvs": 91,
+      "ste_oad": 91
+    },
+    "cbs_types_all_columns": {
+      "gwb_code_10": {
+        "str": 18495
+      },
+      "gwb_code_8": {
+        "str": 18495
+      },
+      "regio": {
+        "str": 18495
+      },
+      "gm_naam": {
+        "str": 18495
+      },
+      "recs": {
+        "str": 18495
+      },
+      "gwb_code": {
+        "str": 18495
+      },
+      "ind_wbi": {
+        "str": 1,
+        "int": 18494
+      },
+      "a_inw": {
+        "int": 18495
+      },
+      "a_man": {
+        "int": 18495
+      },
+      "a_vrouw": {
+        "int": 18495
+      },
+      "a_00_14": {
+        "int": 18495
+      },
+      "a_15_24": {
+        "int": 18495
+      },
+      "a_25_44": {
+        "int": 18495
+      },
+      "a_45_64": {
+        "int": 18495
+      },
+      "a_65_oo": {
+        "int": 18495
+      },
+      "a_ongeh": {
+        "int": 18495
+      },
+      "a_gehuwd": {
+        "int": 18495
+      },
+      "a_gesch": {
+        "int": 18495
+      },
+      "a_verwed": {
+        "int": 18495
+      },
+      "a_nl_all": {
+        "int": 18495
+      },
+      "a_eur_al": {
+        "int": 18495
+      },
+      "a_neu_al": {
+        "int": 18495
+      },
+      "a_geb_nl": {
+        "int": 18495
+      },
+      "a_geb_eu": {
+        "int": 18495
+      },
+      "a_geb_ne": {
+        "int": 18495
+      },
+      "a_gbl_eu": {
+        "int": 18495
+      },
+      "a_gbl_ne": {
+        "int": 18495
+      },
+      "a_geb": {
+        "int": 18495
+      },
+      "p_geb": {
+        "int": 18482,
+        "str": 13
+      },
+      "a_ste": {
+        "int": 18495
+      },
+      "p_ste": {
+        "int": 18482,
+        "str": 13
+      },
+      "a_hh": {
+        "int": 18495
+      },
+      "a_1p_hh": {
+        "int": 18495
+      },
+      "a_hh_z_k": {
+        "int": 18495
+      },
+      "a_hh_m_k": {
+        "int": 18495
+      },
+      "g_hhgro": {
+        "float": 16322,
+        "int": 1715,
+        "str": 458
+      },
+      "bev_dich": {
+        "int": 17684,
+        "str": 811
+      },
+      "a_woning": {
+        "int": 18495
+      },
+      "a_nb_won": {
+        "int": 18495
+      },
+      "a_vastg": {
+        "int": 18495
+      },
+      "a_nb_vastg": {
+        "int": 18495
+      },
+      "g_wozbag": {
+        "int": 16530,
+        "str": 1965
+      },
+      "p_1gezw": {
+        "int": 16699,
+        "str": 1796
+      },
+      "p_1gezw_tw": {
+        "int": 16699,
+        "str": 1796
+      },
+      "p_1gezw_hw": {
+        "int": 16699,
+        "str": 1796
+      },
+      "p_1gezw_2w": {
+        "int": 16699,
+        "str": 1796
+      },
+      "p_1gezw_vw": {
+        "int": 16699,
+        "str": 1796
+      },
+      "p_mgezw": {
+        "int": 16699,
+        "str": 1796
+      },
+      "p_leegsw": {
+        "int": 16699,
+        "str": 1796
+      },
+      "p_koopw": {
+        "int": 16697,
+        "str": 1798
+      },
+      "p_huurw": {
+        "int": 16697,
+        "str": 1798
+      },
+      "p_wcorpw": {
+        "int": 16697,
+        "str": 1798
+      },
+      "p_ov_hw": {
+        "int": 16697,
+        "str": 1798
+      },
+      "p_bj_me10": {
+        "int": 16699,
+        "str": 1796
+      },
+      "p_bj_mi10": {
+        "int": 16699,
+        "str": 1796
+      },
+      "g_ele": {
+        "str": 18495
+      },
+      "g_ele_tr": {
+        "str": 18495
+      },
+      "g_gas": {
+        "str": 18495
+      },
+      "p_stadsv": {
+        "str": 18495
+      },
+      "p_won_z": {
+        "str": 18495
+      },
+      "p_won_m": {
+        "str": 18495
+      },
+      "p_won_zs": {
+        "str": 18495
+      },
+      "p_won_ev": {
+        "str": 18495
+      },
+      "a_lp_pub": {
+        "str": 18495
+      },
+      "a_ons_po": {
+        "int": 18495
+      },
+      "a_ons_vovavo": {
+        "int": 18495
+      },
+      "a_ons_mbo": {
+        "int": 18495
+      },
+      "a_ons_hbo": {
+        "int": 18495
+      },
+      "a_ons_wo": {
+        "int": 18495
+      },
+      "a_opl_bvm": {
+        "str": 18495
+      },
+      "a_opl_hvm": {
+        "str": 18495
+      },
+      "a_opl_hw": {
+        "str": 18495
+      },
+      "a_arb_wz": {
+        "str": 18495
+      },
+      "p_arb_pp": {
+        "str": 18495
+      },
+      "p_arb_wn": {
+        "str": 18495
+      },
+      "p_arb_wnv": {
+        "str": 18495
+      },
+      "p_arb_wnf": {
+        "str": 18495
+      },
+      "p_arb_zs": {
+        "str": 18495
+      },
+      "a_inkont": {
+        "str": 18495
+      },
+      "g_ink_po": {
+        "str": 18495
+      },
+      "g_ink_pi": {
+        "str": 18495
+      },
+      "p_ink_li": {
+        "str": 18495
+      },
+      "p_ink_hi": {
+        "str": 18495
+      },
+      "p_ink_ar": {
+        "str": 18495
+      },
+      "p_ink_ba": {
+        "str": 18495
+      },
+      "g_hh_sti": {
+        "str": 18495
+      },
+      "p_hh_li": {
+        "str": 18495
+      },
+      "p_hh_hi": {
+        "str": 18495
+      },
+      "m_hh_ver": {
+        "str": 18495
+      },
+      "a_soz_wb": {
+        "int": 16839,
+        "str": 1656
+      },
+      "a_soz_ao": {
+        "int": 16839,
+        "str": 1656
+      },
+      "a_soz_ww": {
+        "int": 16839,
+        "str": 1656
+      },
+      "a_soz_ow": {
+        "int": 16839,
+        "str": 1656
+      },
+      "a_jz_tn": {
+        "str": 18495
+      },
+      "p_jz_tn": {
+        "str": 18495
+      },
+      "a_wmo_t": {
+        "str": 18495
+      },
+      "p_wmo_t": {
+        "str": 18495
+      },
+      "a_bedv": {
+        "int": 18495
+      },
+      "a_bed_a": {
+        "int": 16490,
+        "str": 2005
+      },
+      "a_bed_bf": {
+        "int": 16490,
+        "str": 2005
+      },
+      "a_bed_gi": {
+        "int": 16490,
+        "str": 2005
+      },
+      "a_bed_hj": {
+        "int": 16490,
+        "str": 2005
+      },
+      "a_bed_kl": {
+        "int": 16490,
+        "str": 2005
+      },
+      "a_bed_mn": {
+        "int": 16490,
+        "str": 2005
+      },
+      "a_bed_oq": {
+        "int": 16490,
+        "str": 2005
+      },
+      "a_bed_ru": {
+        "int": 16490,
+        "str": 2005
+      },
+      "a_pau": {
+        "int": 18495
+      },
+      "a_bst_b": {
+        "int": 18495
+      },
+      "a_bst_nb": {
+        "int": 18495
+      },
+      "g_pau_hh": {
+        "float": 13859,
+        "str": 3234,
+        "int": 1402
+      },
+      "g_pau_km": {
+        "int": 15261,
+        "str": 3234
+      },
+      "a_m2w": {
+        "int": 18495
+      },
+      "g_afs_hp": {
+        "float": 16174,
+        "NoneType": 818,
+        "int": 1503
+      },
+      "g_afs_gs": {
+        "int": 1426,
+        "float": 16251,
+        "NoneType": 818
+      },
+      "g_afs_kv": {
+        "float": 16596,
+        "NoneType": 818,
+        "int": 1081
+      },
+      "g_afs_sc": {
+        "float": 16410,
+        "int": 1267,
+        "NoneType": 818
+      },
+      "g_3km_sc": {
+        "float": 12681,
+        "int": 4996,
+        "NoneType": 818
+      },
+      "a_opp_ha": {
+        "int": 18495
+      },
+      "a_lan_ha": {
+        "int": 18495
+      },
+      "a_wat_ha": {
+        "int": 18495
+      },
+      "pst_mvp": {
+        "NoneType": 3766,
+        "int": 14630,
+        "str": 99
+      },
+      "pst_dekp": {
+        "NoneType": 3766,
+        "int": 14630,
+        "str": 99
+      },
+      "ste_mvs": {
+        "int": 18404,
+        "str": 91
+      },
+      "ste_oad": {
+        "int": 18404,
+        "str": 91
+      }
+    },
+    "housing_duplicate_ids": {},
+    "housing_exact_duplicate_rows": 0
+  },
+  "limitations": [
+    "Housing CSV units, coordinate reference system and provenance/license require source documentation",
+    "No property-to-CBS neighbourhood matching inferred from four-digit postcode",
+    "CBS selected analytical fields typed; all other selected-row fields retained in RawValues",
+    "Teammate supplies publication dates, licenses and source documentation"
+  ]
+}
