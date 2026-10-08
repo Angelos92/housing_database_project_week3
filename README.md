@@ -99,5 +99,37 @@ mysql> SELECT ht.TypeName AS HousingType, loc.City, li.Price, avg_price.AvgPrice
 Empty set (0.01 sec)
 '''
 The queries returned ampty results because the selected datasets contains no rental listings or named landlords. No listing records were fabricated. therefore, these results reflect missing dadtaset coverage, not an absent of rental housing.
+
+#### The perofrmance of new querie using the real data
+mysql> SELECT r.RegionName,
+    ->        s.DwellingCount,
+    ->        s.RentalSharePct
+    -> FROM Region r
+    -> JOIN RegionStatistics s
+    ->   ON r.RegionCode = s.RegionCode
+    ->  AND r.BoundaryYear = s.BoundaryYear
+    -> WHERE r.RegionLevel = 'Buurt'
+    ->   AND s.StatisticsYear = 2025
+    ->   AND s.RentalSharePct IS NOT NULL
+    -> ORDER BY s.RentalSharePct DESC, r.RegionCode
+    -> LIMIT 10;
++----------------------------------+---------------+----------------+
+| RegionName                       | DwellingCount | RentalSharePct |
++----------------------------------+---------------+----------------+
+| Utrecht Science Park             |          1707 |         99.000 |
+| Bedrijvengebied Kanaleneiland    |           372 |         97.000 |
+| Neckardreef en omgeving          |          2247 |         89.000 |
+| Sterrenwijk                      |           392 |         88.000 |
+| Transwijk-Zuid                   |          2001 |         87.000 |
+| Hoog-Catharijne NS en Jaarbeurs  |          1198 |         86.000 |
+| Plettenburg                      |           303 |         86.000 |
+| Wolga- en Donaudreef en omgeving |          2164 |         85.000 |
+| Kanaleneiland-Noord              |          4118 |         84.000 |
+| Zambesidreef en omgeving         |          2050 |         83.000 |
++----------------------------------+---------------+----------------+
+The query returned the ten neighbourhoods with the highest rental housing shares in the selected CBS data. Utrecht Science Park ranked first
+with 99% of its 1,707 dwellings classified as rental housing. Bedrijvengebied Kanaleneiland followed with 97%, and Neckardreef en omgevin
+with 89%. Across the ten neighbourhoods, rental shares ranged from 83% to 99%
+
 ## Video Presentation:
 [![Our presentation: ](https://i9.ytimg.com/vi/JVG7gYdjscE/mqdefault.jpg?sqp=COiVgNYG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGEgYShhMA8=&rs=AOn4CLCpOZsik65oLXuGPmIVFaNoXx_blQ)](https://youtu.be/JVG7gYdjscE)

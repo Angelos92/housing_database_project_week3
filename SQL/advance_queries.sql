@@ -35,3 +35,17 @@ JOIN (
 ) AS avg_price ON avg_price.HousingTypeId = p.HousingTypeId
 WHERE li.Price < avg_price.AvgPriceForType
 ORDER BY BelowAverageBy DESC;
+
+-- 4. neighbourhoods with the highest rental share percentage in 2025.
+SELECT r.RegionName,
+       s.DwellingCount,
+       s.RentalSharePct
+FROM Region r
+JOIN RegionStatistics s
+  ON r.RegionCode = s.RegionCode
+ AND r.BoundaryYear = s.BoundaryYear
+WHERE r.RegionLevel = 'Buurt'
+  AND s.StatisticsYear = 2025
+  AND s.RentalSharePct IS NOT NULL
+ORDER BY s.RentalSharePct DESC, r.RegionCode
+LIMIT 10;
