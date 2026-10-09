@@ -49,3 +49,24 @@ WHERE r.RegionLevel = 'Buurt'
   AND s.RentalSharePct IS NOT NULL
 ORDER BY s.RentalSharePct DESC, r.RegionCode
 LIMIT 10;
+
+-- Queries of K-Vesela
+-- 5. how much of the housing is rented in the neighborhoods with the highest average home values
+SELECT r.RegionName, s.DwellingCount,
+       s.AverageWozThousandsEUR, s.RentalSharePct
+FROM Region r
+JOIN RegionStatistics s
+  ON s.BoundaryYear = r.BoundaryYear AND s.RegionCode = r.RegionCode
+WHERE r.RegionLevel = 'Buurt' AND s.StatisticsYear = 2025
+  AND s.DwellingCount >= 500
+  AND s.AverageWozThousandsEUR IS NOT NULL
+ORDER BY s.AverageWozThousandsEUR DESC
+LIMIT 10;
+
+-- 6. how are energy labels distributed and how old are the homes in each label group?
+SELECT COALESCE(EnergyLabel, 'Unknown') AS EnergyLabel,
+       COUNT(*) AS Properties,
+       ROUND(AVG(BuildYear)) AS AvgBuildYear
+FROM Property
+GROUP BY EnergyLabel
+ORDER BY EnergyLabel;
