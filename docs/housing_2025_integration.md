@@ -20,6 +20,24 @@ Publication date: 18-9-2026
 
 Unless otherwise stated, the Creative Commons Attribution (CC BY 4.0 ) applies to the content of this website.
 
+### Why the datasets are complementary
+
+The two datasets describe the same housing market at different levels of detail. Neither can be derived from the other, so neither is a subset of the other.
+
+| Aspect | Dataset A (Utrecht housing, Kaggle) | Dataset B (CBS Kerncijfers wijken en buurten 2025) |
+| --- | --- | --- |
+| Unit of observation | Individual property (153 records) | Area: municipality, district or neighborhood (184 selected of 18,495 national records) |
+| What it contains | Address, postal code, house type, rooms, build year, lot/house/garden area, energy label, asking and retail value, valuation date, coordinates | Population, households, dwelling count, average WOZ value, rental share, corporation share, other-landlord share |
+| Time reference | Valuation dates in 2024 | Statistics year 2025 |
+| Geographic coverage | Utrecht, Nieuwegein, Vleuten, De Meern | All Dutch municipalities, of which we select Utrecht and Nieuwegein |
+
+**Neither is a subset of the other.**
+- Dataset A contains property-level attributes (rooms, energy label, garden size, build year) that do not exist in the CBS data, and the CBS data cannot be disaggregated into individual properties.
+- Dataset B contains neighborhood-level indicators (rental share, landlord type shares, population, households) that do not exist in Dataset A, and Dataset A's 153 properties cannot be aggregated into these official statistics.
+- The two datasets share no records. They only overlap in geography.
+
+**Why they complement each other.** The project concerns the housing crisis and the rental market. Dataset A describes what the homes look like and what they are worth. Dataset B describes the surrounding neighborhood: how many people live there, how many dwellings are rented and who owns them. Together they allow questions such as which neighborhoods have a high rental share and what kind of housing stock they contain.
+
 ## Cleaning and scope
 
 The CSV contains **153 records, 23 columns and 153 unique IDs**, with no rejected records. Gaps in identifiers are not missing rows to manufacture.
@@ -57,6 +75,56 @@ Selected CBS analytical fields contain 58 dot markers and 34 blanks, converted t
 - Outputs now go to **output/housing_2025/**, historical output/real_data results are untouched.
 
 Use [real_data_schema.sql](../sql/real_data_schema.sql) only in a fresh database. This is not an ALTER migration for the old database. Keys, foreign keys, checks, transaction rollback and refusal to overwrite nonempty databases remain active. Rental Listing and Landlord tables remain empty.
+
+## Normalization of the revised schema (housing2025-v1): 1NF and 2NF
+
+We checked all 15 tables against 1NF and 2NF. The functional dependencies (FDs)
+come from the meaning of each column and from the declared primary and unique keys.
+
+### Results per table
+
+| Table | Key(s) | 1NF | 2NF | Remarks |
+| --- | --- | --- | --- | --- |
+| SourceDataset | DatasetId | Yes | Yes | Single-column key |
+| SourceRecord | (DatasetId, SourceRow) | Controlled exception | Yes | `RawValues` is JSON; see V2 |
+| Region | (BoundaryYear, RegionCode) | Yes | Yes | `RegionName`, `RegionLevel` and `ParentCode` depend on the full key, because the same code can be reused in another boundary year |
+| RegionStatistics | (BoundaryYear, RegionCode, StatisticsYear); also (DatasetId, SourceRow) | Yes | Yes | All statistics depend on the full key, because each year has its own values per region |
+| Location | LocationId | Yes | Yes | Single-column key |
+| HousingType | HousingTypeId; TypeName | Yes | Yes | Lookup table |
+| Property | PropertyId; (DatasetId, ExternalId); (DatasetId, SourceRow) | Yes | Yes | Single-column primary key |
+| MeasurementDefinition | MeasureCode | Yes | Yes | Lookup table |
+| PropertyMeasurement | (PropertyId, MeasureCode) | Yes | Yes | `NumericValue` needs both the property and the measure; missing values have no row |
+| SourceAttributeDefinition | AttributeCode | Yes | Yes | Lookup table |
+| PropertySourceAttribute | (PropertyId, AttributeCode) | Yes | Yes | `SourceCode` needs both the property and the attribute |
+| RentalStatus | RentalStatusId; StatusName | Yes | Yes | Lookup table, empty |
+| LandlordType | LandlordTypeId; TypeName | Yes | Yes | Lookup table, empty |
+| Landlord | LandlordId | Yes | Yes | Single-column key, empty |
+| Listing | ListingId | Yes | Yes | Single-column key, empty |
+
+**1NF.** Every column holds a single atomic value and no table has repeating groups.
+The only exception is `SourceRecord.RawValues` (V2).
+
+**2NF.** A table can only have partial dependencies if its key has more than one column.
+Tables with a single-column key are therefore in 2NF automatically. For the five tables
+with a composite key (SourceRecord, Region, RegionStatistics, PropertyMeasurement,
+PropertySourceAttribute) we checked that every non-key column depends on the whole key
+and not on only part of it.
+
+**3NF.** //TODO
+
+### Deliberate exception
+
+**V2 - SourceRecord: JSON column (kept).**
+`RawValues` stores the original source row as JSON, which is not atomic in the strict
+1NF sense. It is an audit copy for traceability, not a column used for queries.
+Every value used for analysis is stored in its own typed column in the operational
+tables. The raw copy lets us verify the cleaning steps afterwards.
+
+### Design improvements compared with the earlier schema
+- Measurements are stored as one row per (property, measure) instead of one column
+  per measure. This avoids repeating column groups and keeps unknown values as absent
+  rows instead of NULL or 0.
+- Sizes that were previously in `Property.SizeM2` now live in `PropertyMeasurement`.
 
 ## Run on your MySQL server
 
