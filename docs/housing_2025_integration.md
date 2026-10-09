@@ -1,15 +1,23 @@
 # 2025 housing CSV and CBS: current import
 
 `Datasets/A/2025-housing-dataset-alldata.csv` and `Datasets/B/kwb2025.xlsx`.
-source, license and publication date:
+
+Source, license and publication date:
+
 Dataset A:
+
 Source: https://www.kaggle.com/datasets/ictinstitute/utrecht-housing-dataset/data
+
 Publication date: 1-2-2025
-The dataset is freely available under the Kaggle open data license. (CC BY-SA 4.0)
+
+The dataset is released as creative commons, and can be used freely for any purpose. If you use it, please refer to it as the “The Utrecht housing dataset – example dataset for prediction” by Sieuwert van Otterloo, www.ictinstitute.nl or refer to Sieuwert van Otterloo as the author/source.
 
 Dataset B:
+
 Source: https://www.cbs.nl/nl-nl/maatwerk/2026/26/kerncijfers-wijken-en-buurten-2025
+
 Publication date: 18-9-2026 
+
 Unless otherwise stated, the Creative Commons Attribution (CC BY 4.0 ) applies to the content of this website.
 
 ## Cleaning and scope
