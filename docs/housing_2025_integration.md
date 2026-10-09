@@ -174,3 +174,15 @@ The three original Week 3 queries were rerun on the new test database. Queries 1
 Query 4: Which neighbourhoods have the highest rental shares?
 
 The query returned the ten neighbourhoods with the highest rental housing shares in the selected CBS data. Utrecht Science Park ranked first, with 99% of its 1,707 dwellings classified as rental housing. Bedrijvengebied Kanaleneiland followed with 97%, and Neckardreef en omgeving with 89%. Across the ten neighbourhoods, rental shares ranged from 83% to 99%
+
+Query 5:
+
+**Question:** In the neighborhoods with the highest average home values, how much of the housing is rented?
+
+**Relevance:** Affordability is central to the housing crisis. If neighborhoods with high home values have a low rental share, renters have few options there and may be pushed towards other areas, where competition for the remaining rental stock is higher. The query shows whether the most expensive areas of Utrecht and Nieuwegein offer rental housing at all. (WOZ values are tax valuations in thousands of euros, not rents.)
+
+Query 6:
+
+**Question:** How are the energy labels distributed, and how old are the homes in each label group?
+
+**Relevance:** Homes with a poor energy label tend to be poorly insulated, which can mean higher energy bills and costly renovations, and both add to housing costs for tenants and lower-income households. By showing the average build year per label, the query indicates whether the least efficient homes are also the oldest, and so where affordability and the energy transition collide. The data is a sample of 153 properties, so the results describe the sample, not the whole housing stock.
