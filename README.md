@@ -1,4 +1,8 @@
 # housing_database_project_week3
+
+> [!NOTE]
+> This README is the theoretical design (Week 3). The real-data documentation is in [docs/REAL_DATA.md](./docs/REAL_DATA.md).
+
 The repository contains our group project for the KEN2110 Database course.
 
 The goal is to design and implement a relational database that models the housing crisis in Amsterdam - tracking properties, their locations, housing types, landlords and rental listing status.
