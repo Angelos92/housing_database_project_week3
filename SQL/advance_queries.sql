@@ -70,3 +70,28 @@ SELECT COALESCE(EnergyLabel, 'Unknown') AS EnergyLabel,
 FROM Property
 GROUP BY EnergyLabel
 ORDER BY EnergyLabel;
+
+--7. Properties ranked by price in euros per square meter of the property, for each city
+SELECT City, Neighborhood, SizeM2, Price, PricePerM2, RANK() OVER (PARTITION BY City ORDER BY PricePerM2 DESC) AS RankInCity
+FROM (
+    SELECT loc.City, loc.Neighborhood, p.SizeM2, li.Price, ROUND(li.Price / p.SizeM2, 2) AS PricePerM2
+    FROM Listing li
+    JOIN Property p ON li.PropertyId=p.PropertyId 
+    JOIN Location loc ON p.LocationId=loc.LocationId
+) AS pr
+ORDER BY City, RankInCity;
+
+--8 the neighbourhoods of each city, ranked by average rent
+SELECT loc.City, loc.Neighborhood, ROUND(SUM(li.Price)/ COUNT(li.Price), 2) AS AvgRent
+FROM Listing li
+JOIN Property p ON li.PropertyId= p.PropertyId
+JOIN Location loc ON p.LocationId=loc.LocationId
+GROUP BY loc.City, loc.Neighborhood
+ORDER BY loc.City, AvgRent DESC;
+
+--9.Landlords who own the most properties
+SELECT l.LandlordName, COUNT(DISTINCT li.PropertyId) AS NumberOfProperties
+FROM Landlord l
+JOIN Listing li ON li.LandlordId=l.Landlord
+GROUP BY l.Landlord, l.LandlordName
+ORDER BY NumberOfProperties DESC;
